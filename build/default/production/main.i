@@ -11476,7 +11476,7 @@ void WDT_Initialize(void);
 
 
 
-uint8_t blue = 0x00, green = 0x00, red = 0xFF;
+uint8_t blue = 0x05, green = 0x01, red = 0x01;
 
 enum states {
     GREEN_UP, RED_DOWN, BLUE_UP, GREEN_DOWN, RED_UP, BLUE_DOWN
@@ -11490,6 +11490,7 @@ enum count {
 enum count direction = UP;
 char led_run = 0;
 const int NumberOfLEDs = 60;
+const int rng = rand()%60;
 
 void Send_LED_Frame(uint8_t intensity, uint8_t blue, uint8_t green, uint8_t red) {
     SPI1_Exchange8bit(0xE0 | intensity);
@@ -11513,7 +11514,7 @@ void Send_LED_EndFrame() {
 void main(void) {
 
     SYSTEM_Initialize();
-# 105 "main.c"
+# 106 "main.c"
     while (1) {
         switch (direction) {
             case UP: if (led_run < NumberOfLEDs - 1) {
@@ -11529,51 +11530,13 @@ void main(void) {
                 }
                 break;
         }
-
-        switch (change_color) {
-            case GREEN_UP: if (green < 0xFF) {
-                    green += step;
-                } else {
-                    change_color = RED_DOWN;
-                }
-                break;
-            case RED_DOWN: if (red > 0x00) {
-                    red -= step;
-                } else {
-                    change_color = BLUE_UP;
-                }
-                break;
-            case BLUE_UP: if (blue < 0xFF) {
-                    blue += step;
-                } else {
-                    change_color = GREEN_DOWN;
-                }
-                break;
-            case GREEN_DOWN: if (green > 0x00) {
-                    green -= step;
-                } else {
-                    change_color = RED_UP;
-                }
-                break;
-            case RED_UP: if (red < 0xFF) {
-                    red += step;
-                } else {
-                    change_color = BLUE_DOWN;
-                }
-                break;
-            case BLUE_DOWN: if (blue > 0x00) {
-                    blue -= step;
-                } else {
-                    change_color = GREEN_UP;
-                }
-                break;
-        }
-
-
+# 163 "main.c"
         Send_LED_StartFrame();
-        for (char led = 0; led < NumberOfLEDs; led++) {
-            if (led == 55) {
-                Send_LED_Frame(0x05, blue, green, red);
+
+        for (int led = 0; led < NumberOfLEDs; led++) {
+
+            if (led == rng) {
+                Send_LED_Frame(0x05, blue, 0x00, 0x00);
             } else {
                 Send_LED_Frame(0x00, 0x00, 0x00, 0x00);
             }

@@ -48,7 +48,7 @@
 /*
                          Main application
  */
-uint8_t blue = 0x00, green = 0x00, red = 0xFF;
+uint8_t blue = 0x05, green = 0x01, red = 0x01;
 
 enum states {
     GREEN_UP, RED_DOWN, BLUE_UP, GREEN_DOWN, RED_UP, BLUE_DOWN
@@ -62,6 +62,7 @@ enum count {
 enum count direction = UP;
 char led_run = 0;
 const int NumberOfLEDs = 60;
+const int rng = rand()%60;
 
 void Send_LED_Frame(uint8_t intensity, uint8_t blue, uint8_t green, uint8_t red) {
     SPI1_Exchange8bit(0xE0 | intensity);
@@ -118,7 +119,7 @@ void main(void) {
                 break;
         }
 
-        switch (change_color) {
+        /*switch (change_color) {
             case GREEN_UP: if (green < 0xFF) {
                     green += step;
                 } else {
@@ -155,13 +156,16 @@ void main(void) {
                     change_color = GREEN_UP;
                 }
                 break;
-        }
+        }*/
 
         //start frame
+        
         Send_LED_StartFrame();
-        for (char led = 0; led < NumberOfLEDs; led++) {
-            if (led == 55) {
-                Send_LED_Frame(0x05, blue, green, red);
+        
+        for (int led = 0; led < NumberOfLEDs; led++) {
+     
+            if (led == rng) {
+                Send_LED_Frame(0x05, blue, 0x00, 0x00);
             } else {
                 Send_LED_Frame(0x00, 0x00, 0x00, 0x00);
             } 
