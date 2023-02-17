@@ -6,5 +6,5 @@
 CND_BASEDIR=`pwd`
 # default configuration
 CND_ARTIFACT_DIR_default=dist/default/production
-CND_ARTIFACT_NAME_default=Ledstrip_Looplicht.X.production.hex
-CND_ARTIFACT_PATH_default=dist/default/production/Ledstrip_Looplicht.X.production.hex
+CND_ARTIFACT_NAME_default=ledstripLooplicht.production.hex
+CND_ARTIFACT_PATH_default=dist/default/production/ledstripLooplicht.production.hex

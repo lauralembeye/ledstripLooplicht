@@ -160,16 +160,16 @@ void main(void) {
         //start frame
         Send_LED_StartFrame();
         for (char led = 0; led < NumberOfLEDs; led++) {
-            if (led == led_run) {
-                Send_LED_Frame(0x1F, blue, green, red);
+            if (led == 55) {
+                Send_LED_Frame(0x05, blue, green, red);
             } else {
                 Send_LED_Frame(0x00, 0x00, 0x00, 0x00);
-            }
+            } 
         }
         //stop frame
         Send_LED_EndFrame();
         __delay_ms(10);
-    };
+    }
 }
 /**
  End of File

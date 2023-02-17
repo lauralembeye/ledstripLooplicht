@@ -40,12 +40,12 @@
     <conf name="default" type="2">
       <toolsSet>
         <developmentServer>localhost</developmentServer>
-        <targetDevice>PIC16F18345</targetDevice>
+        <targetDevice>PIC16F18346</targetDevice>
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
-        <platformTool>pkob4hybrid</platformTool>
+        <platformTool>PKOBSKDEPlatformTool</platformTool>
         <languageToolchain>XC8</languageToolchain>
-        <languageToolchainVersion>2.36</languageToolchainVersion>
+        <languageToolchainVersion>2.35</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
@@ -203,6 +203,8 @@
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.ranges" value="0-1fff"/>
         <property key="memories.userotp" value="true"/>
+        <property key="programmerToGoFilePath"
+                  value="C:/Users/Cedric/Downloads/Ledstrip_Looplicht.X (1)/Ledstrip_Looplicht.X/debug/default/Ledstrip_Looplicht_ptg"/>
         <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.preservedataflash" value="false"/>

@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=Ledstrip_Looplicht.X
+PROJECTNAME=ledstripLooplicht
 
 # Active Configuration
 DEFAULTCONF=default

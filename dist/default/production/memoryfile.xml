@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project>
-  <executable name="dist/default/production\Ledstrip_Looplicht.X.production.hex">
+  <executable name="dist/default/production\ledstripLooplicht.production.hex">
     <memory name="program">
       <units>words</units>
-      <length>8192</length>
+      <length>16384</length>
       <used>407</used>
-      <free>7785</free>
+      <free>15977</free>
     </memory>
     <memory name="data">
       <units>bytes</units>
-      <length>1024</length>
+      <length>2048</length>
       <used>18</used>
-      <free>1006</free>
+      <free>2030</free>
     </memory>
   </executable>
 </project>
