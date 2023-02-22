@@ -1,15 +1,11 @@
 /**
   Generated Main Source File
-
   Company:
     Microchip Technology Inc.
-
   File Name:
     main.c
-
   Summary:
     This is the main file generated using MPLAB(c) Code Configurator
-
   Description:
     This header file provides implementations for driver APIs for all modules selected in the GUI.
     Generation Information :
@@ -24,13 +20,11 @@
 /*
     (c) 2016 Microchip Technology Inc. and its subsidiaries. You may use this
     software and any derivatives exclusively with Microchip products.
-
     THIS SOFTWARE IS SUPPLIED BY MICROCHIP "AS IS". NO WARRANTIES, WHETHER
     EXPRESS, IMPLIED OR STATUTORY, APPLY TO THIS SOFTWARE, INCLUDING ANY IMPLIED
     WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY, AND FITNESS FOR A
     PARTICULAR PURPOSE, OR ITS INTERACTION WITH MICROCHIP PRODUCTS, COMBINATION
     WITH ANY OTHER PRODUCTS, OR USE IN ANY APPLICATION.
-
     IN NO EVENT WILL MICROCHIP BE LIABLE FOR ANY INDIRECT, SPECIAL, PUNITIVE,
     INCIDENTAL OR CONSEQUENTIAL LOSS, DAMAGE, COST OR EXPENSE OF ANY KIND
     WHATSOEVER RELATED TO THE SOFTWARE, HOWEVER CAUSED, EVEN IF MICROCHIP HAS
@@ -38,7 +32,6 @@
     FULLEST EXTENT ALLOWED BY LAW, MICROCHIP'S TOTAL LIABILITY ON ALL CLAIMS IN
     ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT OF FEES, IF ANY,
     THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
-
     MICROCHIP PROVIDES THIS SOFTWARE CONDITIONALLY UPON YOUR ACCEPTANCE OF THESE
     TERMS.
  */
@@ -48,7 +41,7 @@
 /*
                          Main application
  */
-uint8_t blue = 0x05, green = 0x01, red = 0x01;
+uint8_t blue = 0x00, green = 0x00, red = 0xFF;
 
 enum states {
     GREEN_UP, RED_DOWN, BLUE_UP, GREEN_DOWN, RED_UP, BLUE_DOWN
@@ -62,7 +55,6 @@ enum count {
 enum count direction = UP;
 char led_run = 0;
 const int NumberOfLEDs = 60;
-const int rng = rand()%60;
 
 void Send_LED_Frame(uint8_t intensity, uint8_t blue, uint8_t green, uint8_t red) {
     SPI1_Exchange8bit(0xE0 | intensity);
@@ -72,7 +64,7 @@ void Send_LED_Frame(uint8_t intensity, uint8_t blue, uint8_t green, uint8_t red)
 }
 
 void Send_LED_StartFrame() {
-    for (int i = 0; i < 4; i++) {
+    for (int i = 0; i < 4; i++) {//3kleuren
         SPI1_Exchange8bit(0x00);
     }
 }
@@ -102,7 +94,7 @@ void main(void) {
     // Disable the Peripheral Interrupts
     //INTERRUPT_PeripheralInterruptDisable();
 
-
+//richting
     while (1) {
         switch (direction) {
             case UP: if (led_run < NumberOfLEDs - 1) {
@@ -118,8 +110,8 @@ void main(void) {
                 }
                 break;
         }
-
-        /*switch (change_color) {
+//kleurverandering
+        switch (change_color) {
             case GREEN_UP: if (green < 0xFF) {
                     green += step;
                 } else {
@@ -132,7 +124,7 @@ void main(void) {
                     change_color = BLUE_UP;
                 }
                 break;
-            case BLUE_UP: if (blue < 0xFF) {
+            /*case BLUE_UP: if (blue < 0xFF) {
                     blue += step;
                 } else {
                     change_color = GREEN_DOWN;
@@ -155,25 +147,22 @@ void main(void) {
                 } else {
                     change_color = GREEN_UP;
                 }
-                break;
-        }*/
-
+                break;*/
+        }
+        //zet licht aan en uit
         //start frame
-        
         Send_LED_StartFrame();
-        
-        for (int led = 0; led < NumberOfLEDs; led++) {
-     
-            if (led == rng) {
-                Send_LED_Frame(0x05, blue, 0x00, 0x00);
+        for (char led = 0; led < NumberOfLEDs; led++) {
+            if (led == led_run) {
+                Send_LED_Frame(0x1F, blue, green, red);
             } else {
                 Send_LED_Frame(0x00, 0x00, 0x00, 0x00);
-            } 
+            }
         }
         //stop frame
         Send_LED_EndFrame();
-        __delay_ms(10);
-    }
+        __delay_ms(100);
+    };
 }
 /**
  End of File
