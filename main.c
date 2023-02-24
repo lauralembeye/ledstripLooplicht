@@ -44,6 +44,7 @@
  */
 
 #include "mcc_generated_files/mcc.h"
+#include <stdlib.h>
 
 /*
                          Main application
@@ -157,10 +158,14 @@ void main(void) {
                 break;
         }
 
+        do {
+            led_run = rand();
+        } while (led_run > 60 && led_run < 0);
+        
         //start frame
         Send_LED_StartFrame();
         for (char led = 0; led < NumberOfLEDs; led++) {
-            if (led == 55) {
+            if (led == led_run) {
                 Send_LED_Frame(0x05, blue, green, red);
             } else {
                 Send_LED_Frame(0x00, 0x00, 0x00, 0x00);
@@ -168,7 +173,7 @@ void main(void) {
         }
         //stop frame
         Send_LED_EndFrame();
-        __delay_ms(10);
+        __delay_ms(100);
     }
 }
 /**

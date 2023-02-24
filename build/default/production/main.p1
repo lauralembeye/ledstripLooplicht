@@ -1,10 +1,10 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"56 main.c
-[; ;main.c: 56: enum states change_color = GREEN_UP;
+"57 main.c
+[; ;main.c: 57: enum states change_color = GREEN_UP;
 [c E6790 0 1 2 3 4 5 .. ]
 [n E6790 states GREEN_UP RED_DOWN BLUE_UP GREEN_DOWN RED_UP BLUE_DOWN  ]
-"62
-[; ;main.c: 62: enum count direction = UP;
+"63
+[; ;main.c: 63: enum count direction = UP;
 [c E6799 0 1 .. ]
 [n E6799 count UP DOWN  ]
 "151 ./mcc_generated_files/spi1.h
@@ -14,6 +14,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "68 ./mcc_generated_files/mcc.h
 [; ;./mcc_generated_files/mcc.h: 68: void SYSTEM_Initialize(void);
 [v _SYSTEM_Initialize `(v ~T0 @X0 0 ef ]
+"39 C:\Program Files\Microchip\xc8\v2.35\pic\include\c99\stdlib.h
+[; ;C:\Program Files\Microchip\xc8\v2.35\pic\include\c99\stdlib.h: 39: int rand (void);
+[v _rand `(i ~T0 @X0 0 ef ]
 [v F192 `(v ~T0 @X0 1 tf1`ul ]
 "12 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16F1xxxx_DFP/1.9.163/xc8\pic\include\builtins.h
 [v __delay `JF192 ~T0 @X0 0 e ]
@@ -1077,8 +1080,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "19975
 [; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16F1xxxx_DFP/1.9.163/xc8\pic\include\proc\pic16f18346.h: 19975: __asm("TOSH equ 0FEFh");
 [; <" TOSH equ 0FEFh ;# ">
-"51 main.c
-[; ;main.c: 51: uint8_t blue = 0x00, green = 0x00, red = 0xFF;
+"52 main.c
+[; ;main.c: 52: uint8_t blue = 0x00, green = 0x00, red = 0xFF;
 [v _blue `uc ~T0 @X0 1 e ]
 [i _blue
 -> -> 0 `i `uc
@@ -1091,38 +1094,38 @@ Version 4.0 HI-TECH Software Intermediate Code
 [i _red
 -> -> 255 `i `uc
 ]
-"56
-[; ;main.c: 56: enum states change_color = GREEN_UP;
+"57
+[; ;main.c: 57: enum states change_color = GREEN_UP;
 [v _change_color `E6790 ~T0 @X0 1 e ]
 [i _change_color
 . `E6790 0
 ]
-"57
-[; ;main.c: 57: uint8_t step = 1;
+"58
+[; ;main.c: 58: uint8_t step = 1;
 [v _step `uc ~T0 @X0 1 e ]
 [i _step
 -> -> 1 `i `uc
 ]
-"62
-[; ;main.c: 62: enum count direction = UP;
+"63
+[; ;main.c: 63: enum count direction = UP;
 [v _direction `E6799 ~T0 @X0 1 e ]
 [i _direction
 . `E6799 0
 ]
-"63
-[; ;main.c: 63: char led_run = 0;
+"64
+[; ;main.c: 64: char led_run = 0;
 [v _led_run `uc ~T0 @X0 1 e ]
 [i _led_run
 -> -> 0 `i `uc
 ]
-"64
-[; ;main.c: 64: const int NumberOfLEDs = 60;
+"65
+[; ;main.c: 65: const int NumberOfLEDs = 60;
 [v _NumberOfLEDs `Ci ~T0 @X0 1 e ]
 [i _NumberOfLEDs
 -> 60 `i
 ]
-"66
-[; ;main.c: 66: void Send_LED_Frame(uint8_t intensity, uint8_t blue, uint8_t green, uint8_t red) {
+"67
+[; ;main.c: 67: void Send_LED_Frame(uint8_t intensity, uint8_t blue, uint8_t green, uint8_t red) {
 [v _Send_LED_Frame `(v ~T0 @X0 1 ef4`uc`uc`uc`uc ]
 {
 [e :U _Send_LED_Frame ]
@@ -1131,30 +1134,30 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _green `uc ~T0 @X0 1 r3 ]
 [v _red `uc ~T0 @X0 1 r4 ]
 [f ]
-"67
-[; ;main.c: 67:     SPI1_Exchange8bit(0xE0 | intensity);
-[e ( _SPI1_Exchange8bit (1 -> | -> 224 `i -> _intensity `i `uc ]
 "68
-[; ;main.c: 68:     SPI1_Exchange8bit(blue);
-[e ( _SPI1_Exchange8bit (1 _blue ]
+[; ;main.c: 68:     SPI1_Exchange8bit(0xE0 | intensity);
+[e ( _SPI1_Exchange8bit (1 -> | -> 224 `i -> _intensity `i `uc ]
 "69
-[; ;main.c: 69:     SPI1_Exchange8bit(green);
-[e ( _SPI1_Exchange8bit (1 _green ]
+[; ;main.c: 69:     SPI1_Exchange8bit(blue);
+[e ( _SPI1_Exchange8bit (1 _blue ]
 "70
-[; ;main.c: 70:     SPI1_Exchange8bit(red);
-[e ( _SPI1_Exchange8bit (1 _red ]
+[; ;main.c: 70:     SPI1_Exchange8bit(green);
+[e ( _SPI1_Exchange8bit (1 _green ]
 "71
-[; ;main.c: 71: }
+[; ;main.c: 71:     SPI1_Exchange8bit(red);
+[e ( _SPI1_Exchange8bit (1 _red ]
+"72
+[; ;main.c: 72: }
 [e :UE 965 ]
 }
-"73
-[; ;main.c: 73: void Send_LED_StartFrame() {
+"74
+[; ;main.c: 74: void Send_LED_StartFrame() {
 [v _Send_LED_StartFrame `(v ~T0 @X0 1 ef ]
 {
 [e :U _Send_LED_StartFrame ]
 [f ]
-"74
-[; ;main.c: 74:     for (int i = 0; i < 4; i++) {
+"75
+[; ;main.c: 75:     for (int i = 0; i < 4; i++) {
 {
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 0 `i ]
@@ -1162,28 +1165,28 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $U 968  ]
 [e :U 967 ]
 {
-"75
-[; ;main.c: 75:         SPI1_Exchange8bit(0x00);
-[e ( _SPI1_Exchange8bit (1 -> -> 0 `i `uc ]
 "76
-[; ;main.c: 76:     }
+[; ;main.c: 76:         SPI1_Exchange8bit(0x00);
+[e ( _SPI1_Exchange8bit (1 -> -> 0 `i `uc ]
+"77
+[; ;main.c: 77:     }
 }
 [e ++ _i -> 1 `i ]
 [e $ < _i -> 4 `i 967  ]
 [e :U 968 ]
 }
-"77
-[; ;main.c: 77: }
+"78
+[; ;main.c: 78: }
 [e :UE 966 ]
 }
-"79
-[; ;main.c: 79: void Send_LED_EndFrame() {
+"80
+[; ;main.c: 80: void Send_LED_EndFrame() {
 [v _Send_LED_EndFrame `(v ~T0 @X0 1 ef ]
 {
 [e :U _Send_LED_EndFrame ]
 [f ]
-"80
-[; ;main.c: 80:     for (int i = 0; i < 4; i++) {
+"81
+[; ;main.c: 81:     for (int i = 0; i < 4; i++) {
 {
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 0 `i ]
@@ -1191,88 +1194,88 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $U 972  ]
 [e :U 971 ]
 {
-"81
-[; ;main.c: 81:         SPI1_Exchange8bit(0xFF);
-[e ( _SPI1_Exchange8bit (1 -> -> 255 `i `uc ]
 "82
-[; ;main.c: 82:     }
+[; ;main.c: 82:         SPI1_Exchange8bit(0xFF);
+[e ( _SPI1_Exchange8bit (1 -> -> 255 `i `uc ]
+"83
+[; ;main.c: 83:     }
 }
 [e ++ _i -> 1 `i ]
 [e $ < _i -> 4 `i 971  ]
 [e :U 972 ]
 }
-"83
-[; ;main.c: 83: }
+"84
+[; ;main.c: 84: }
 [e :UE 970 ]
 }
 [v $root$_main `(v ~T0 @X0 0 e ]
-"85
-[; ;main.c: 85: void main(void) {
+"86
+[; ;main.c: 86: void main(void) {
 [v _main `(v ~T0 @X0 1 ef ]
 {
 [e :U _main ]
 [f ]
-"87
-[; ;main.c: 87:     SYSTEM_Initialize();
+"88
+[; ;main.c: 88:     SYSTEM_Initialize();
 [e ( _SYSTEM_Initialize ..  ]
-"105
-[; ;main.c: 105:     while (1) {
+"106
+[; ;main.c: 106:     while (1) {
 [e :U 976 ]
 {
-"106
-[; ;main.c: 106:         switch (direction) {
+"107
+[; ;main.c: 107:         switch (direction) {
 [e $U 979  ]
 {
-"107
-[; ;main.c: 107:             case UP: if (led_run < NumberOfLEDs - 1) {
+"108
+[; ;main.c: 108:             case UP: if (led_run < NumberOfLEDs - 1) {
 [e :U 980 ]
 [e $ ! < -> _led_run `i - _NumberOfLEDs -> 1 `i 981  ]
 {
-"108
-[; ;main.c: 108:                     led_run++;
-[e ++ _led_run -> -> 1 `i `uc ]
 "109
-[; ;main.c: 109:                 } else {
+[; ;main.c: 109:                     led_run++;
+[e ++ _led_run -> -> 1 `i `uc ]
+"110
+[; ;main.c: 110:                 } else {
 }
 [e $U 982  ]
 [e :U 981 ]
 {
-"110
-[; ;main.c: 110:                     direction = DOWN;
-[e = _direction . `E6799 1 ]
 "111
-[; ;main.c: 111:                 }
+[; ;main.c: 111:                     direction = DOWN;
+[e = _direction . `E6799 1 ]
+"112
+[; ;main.c: 112:                 }
 }
 [e :U 982 ]
-"112
-[; ;main.c: 112:                 break;
-[e $U 978  ]
 "113
-[; ;main.c: 113:             case DOWN: if (led_run > 0) {
+[; ;main.c: 113:                 break;
+[e $U 978  ]
+"114
+[; ;main.c: 114:             case DOWN: if (led_run > 0) {
 [e :U 983 ]
 [e $ ! > -> _led_run `i -> 0 `i 984  ]
 {
-"114
-[; ;main.c: 114:                     led_run--;
-[e -- _led_run -> -> 1 `i `uc ]
 "115
-[; ;main.c: 115:                 } else {
+[; ;main.c: 115:                     led_run--;
+[e -- _led_run -> -> 1 `i `uc ]
+"116
+[; ;main.c: 116:                 } else {
 }
 [e $U 985  ]
 [e :U 984 ]
 {
-"116
-[; ;main.c: 116:                     direction = UP;
-[e = _direction . `E6799 0 ]
 "117
-[; ;main.c: 117:                 }
+[; ;main.c: 117:                     direction = UP;
+[e = _direction . `E6799 0 ]
+"118
+[; ;main.c: 118:                 }
 }
 [e :U 985 ]
-"118
-[; ;main.c: 118:                 break;
-[e $U 978  ]
 "119
-[; ;main.c: 119:         }
+[; ;main.c: 119:                 break;
+[e $U 978  ]
+"120
+[; ;main.c: 120:         }
 }
 [e $U 978  ]
 [e :U 979 ]
@@ -1280,156 +1283,156 @@ Version 4.0 HI-TECH Software Intermediate Code
  , $ -> . `E6799 1 `ui 983
  978 ]
 [e :U 978 ]
-"121
-[; ;main.c: 121:         switch (change_color) {
+"122
+[; ;main.c: 122:         switch (change_color) {
 [e $U 987  ]
 {
-"122
-[; ;main.c: 122:             case GREEN_UP: if (green < 0xFF) {
+"123
+[; ;main.c: 123:             case GREEN_UP: if (green < 0xFF) {
 [e :U 988 ]
 [e $ ! < -> _green `i -> 255 `i 989  ]
 {
-"123
-[; ;main.c: 123:                     green += step;
-[e =+ _green -> _step `uc ]
 "124
-[; ;main.c: 124:                 } else {
+[; ;main.c: 124:                     green += step;
+[e =+ _green -> _step `uc ]
+"125
+[; ;main.c: 125:                 } else {
 }
 [e $U 990  ]
 [e :U 989 ]
 {
-"125
-[; ;main.c: 125:                     change_color = RED_DOWN;
-[e = _change_color . `E6790 1 ]
 "126
-[; ;main.c: 126:                 }
+[; ;main.c: 126:                     change_color = RED_DOWN;
+[e = _change_color . `E6790 1 ]
+"127
+[; ;main.c: 127:                 }
 }
 [e :U 990 ]
-"127
-[; ;main.c: 127:                 break;
-[e $U 986  ]
 "128
-[; ;main.c: 128:             case RED_DOWN: if (red > 0x00) {
+[; ;main.c: 128:                 break;
+[e $U 986  ]
+"129
+[; ;main.c: 129:             case RED_DOWN: if (red > 0x00) {
 [e :U 991 ]
 [e $ ! > -> _red `i -> 0 `i 992  ]
 {
-"129
-[; ;main.c: 129:                     red -= step;
-[e =- _red -> _step `uc ]
 "130
-[; ;main.c: 130:                 } else {
+[; ;main.c: 130:                     red -= step;
+[e =- _red -> _step `uc ]
+"131
+[; ;main.c: 131:                 } else {
 }
 [e $U 993  ]
 [e :U 992 ]
 {
-"131
-[; ;main.c: 131:                     change_color = BLUE_UP;
-[e = _change_color . `E6790 2 ]
 "132
-[; ;main.c: 132:                 }
+[; ;main.c: 132:                     change_color = BLUE_UP;
+[e = _change_color . `E6790 2 ]
+"133
+[; ;main.c: 133:                 }
 }
 [e :U 993 ]
-"133
-[; ;main.c: 133:                 break;
-[e $U 986  ]
 "134
-[; ;main.c: 134:             case BLUE_UP: if (blue < 0xFF) {
+[; ;main.c: 134:                 break;
+[e $U 986  ]
+"135
+[; ;main.c: 135:             case BLUE_UP: if (blue < 0xFF) {
 [e :U 994 ]
 [e $ ! < -> _blue `i -> 255 `i 995  ]
 {
-"135
-[; ;main.c: 135:                     blue += step;
-[e =+ _blue -> _step `uc ]
 "136
-[; ;main.c: 136:                 } else {
+[; ;main.c: 136:                     blue += step;
+[e =+ _blue -> _step `uc ]
+"137
+[; ;main.c: 137:                 } else {
 }
 [e $U 996  ]
 [e :U 995 ]
 {
-"137
-[; ;main.c: 137:                     change_color = GREEN_DOWN;
-[e = _change_color . `E6790 3 ]
 "138
-[; ;main.c: 138:                 }
+[; ;main.c: 138:                     change_color = GREEN_DOWN;
+[e = _change_color . `E6790 3 ]
+"139
+[; ;main.c: 139:                 }
 }
 [e :U 996 ]
-"139
-[; ;main.c: 139:                 break;
-[e $U 986  ]
 "140
-[; ;main.c: 140:             case GREEN_DOWN: if (green > 0x00) {
+[; ;main.c: 140:                 break;
+[e $U 986  ]
+"141
+[; ;main.c: 141:             case GREEN_DOWN: if (green > 0x00) {
 [e :U 997 ]
 [e $ ! > -> _green `i -> 0 `i 998  ]
 {
-"141
-[; ;main.c: 141:                     green -= step;
-[e =- _green -> _step `uc ]
 "142
-[; ;main.c: 142:                 } else {
+[; ;main.c: 142:                     green -= step;
+[e =- _green -> _step `uc ]
+"143
+[; ;main.c: 143:                 } else {
 }
 [e $U 999  ]
 [e :U 998 ]
 {
-"143
-[; ;main.c: 143:                     change_color = RED_UP;
-[e = _change_color . `E6790 4 ]
 "144
-[; ;main.c: 144:                 }
+[; ;main.c: 144:                     change_color = RED_UP;
+[e = _change_color . `E6790 4 ]
+"145
+[; ;main.c: 145:                 }
 }
 [e :U 999 ]
-"145
-[; ;main.c: 145:                 break;
-[e $U 986  ]
 "146
-[; ;main.c: 146:             case RED_UP: if (red < 0xFF) {
+[; ;main.c: 146:                 break;
+[e $U 986  ]
+"147
+[; ;main.c: 147:             case RED_UP: if (red < 0xFF) {
 [e :U 1000 ]
 [e $ ! < -> _red `i -> 255 `i 1001  ]
 {
-"147
-[; ;main.c: 147:                     red += step;
-[e =+ _red -> _step `uc ]
 "148
-[; ;main.c: 148:                 } else {
+[; ;main.c: 148:                     red += step;
+[e =+ _red -> _step `uc ]
+"149
+[; ;main.c: 149:                 } else {
 }
 [e $U 1002  ]
 [e :U 1001 ]
 {
-"149
-[; ;main.c: 149:                     change_color = BLUE_DOWN;
-[e = _change_color . `E6790 5 ]
 "150
-[; ;main.c: 150:                 }
+[; ;main.c: 150:                     change_color = BLUE_DOWN;
+[e = _change_color . `E6790 5 ]
+"151
+[; ;main.c: 151:                 }
 }
 [e :U 1002 ]
-"151
-[; ;main.c: 151:                 break;
-[e $U 986  ]
 "152
-[; ;main.c: 152:             case BLUE_DOWN: if (blue > 0x00) {
+[; ;main.c: 152:                 break;
+[e $U 986  ]
+"153
+[; ;main.c: 153:             case BLUE_DOWN: if (blue > 0x00) {
 [e :U 1003 ]
 [e $ ! > -> _blue `i -> 0 `i 1004  ]
 {
-"153
-[; ;main.c: 153:                     blue -= step;
-[e =- _blue -> _step `uc ]
 "154
-[; ;main.c: 154:                 } else {
+[; ;main.c: 154:                     blue -= step;
+[e =- _blue -> _step `uc ]
+"155
+[; ;main.c: 155:                 } else {
 }
 [e $U 1005  ]
 [e :U 1004 ]
 {
-"155
-[; ;main.c: 155:                     change_color = GREEN_UP;
-[e = _change_color . `E6790 0 ]
 "156
-[; ;main.c: 156:                 }
+[; ;main.c: 156:                     change_color = GREEN_UP;
+[e = _change_color . `E6790 0 ]
+"157
+[; ;main.c: 157:                 }
 }
 [e :U 1005 ]
-"157
-[; ;main.c: 157:                 break;
-[e $U 986  ]
 "158
-[; ;main.c: 158:         }
+[; ;main.c: 158:                 break;
+[e $U 986  ]
+"159
+[; ;main.c: 159:         }
 }
 [e $U 986  ]
 [e :U 987 ]
@@ -1442,57 +1445,69 @@ Version 4.0 HI-TECH Software Intermediate Code
  986 ]
 [e :U 986 ]
 "161
-[; ;main.c: 161:         Send_LED_StartFrame();
-[e ( _Send_LED_StartFrame ..  ]
+[; ;main.c: 161:         do {
+[e :U 1008 ]
+{
 "162
-[; ;main.c: 162:         for (char led = 0; led < NumberOfLEDs; led++) {
+[; ;main.c: 162:             led_run = rand();
+[e = _led_run -> ( _rand ..  `uc ]
+"163
+[; ;main.c: 163:         } while (led_run > 60 && led_run < 0);
+}
+[e $ && > -> _led_run `i -> 60 `i < -> _led_run `i -> 0 `i 1008  ]
+[e :U 1007 ]
+"166
+[; ;main.c: 166:         Send_LED_StartFrame();
+[e ( _Send_LED_StartFrame ..  ]
+"167
+[; ;main.c: 167:         for (char led = 0; led < NumberOfLEDs; led++) {
 {
 [v _led `uc ~T0 @X0 1 a ]
 [e = _led -> -> 0 `i `uc ]
-[e $ < -> _led `i _NumberOfLEDs 1006  ]
-[e $U 1007  ]
-[e :U 1006 ]
-{
-"163
-[; ;main.c: 163:             if (led == 55) {
-[e $ ! == -> _led `i -> 55 `i 1009  ]
-{
-"164
-[; ;main.c: 164:                 Send_LED_Frame(0x05, blue, green, red);
-[e ( _Send_LED_Frame (4 , , , -> -> 5 `i `uc _blue _green _red ]
-"165
-[; ;main.c: 165:             } else {
-}
+[e $ < -> _led `i _NumberOfLEDs 1009  ]
 [e $U 1010  ]
 [e :U 1009 ]
 {
-"166
-[; ;main.c: 166:                 Send_LED_Frame(0x00, 0x00, 0x00, 0x00);
-[e ( _Send_LED_Frame (4 , , , -> -> 0 `i `uc -> -> 0 `i `uc -> -> 0 `i `uc -> -> 0 `i `uc ]
-"167
-[; ;main.c: 167:             }
-}
-[e :U 1010 ]
 "168
-[; ;main.c: 168:         }
+[; ;main.c: 168:             if (led == led_run) {
+[e $ ! == -> _led `i -> _led_run `i 1012  ]
+{
+"169
+[; ;main.c: 169:                 Send_LED_Frame(0x05, blue, green, red);
+[e ( _Send_LED_Frame (4 , , , -> -> 5 `i `uc _blue _green _red ]
+"170
+[; ;main.c: 170:             } else {
+}
+[e $U 1013  ]
+[e :U 1012 ]
+{
+"171
+[; ;main.c: 171:                 Send_LED_Frame(0x00, 0x00, 0x00, 0x00);
+[e ( _Send_LED_Frame (4 , , , -> -> 0 `i `uc -> -> 0 `i `uc -> -> 0 `i `uc -> -> 0 `i `uc ]
+"172
+[; ;main.c: 172:             }
+}
+[e :U 1013 ]
+"173
+[; ;main.c: 173:         }
 }
 [e ++ _led -> -> 1 `i `uc ]
-[e $ < -> _led `i _NumberOfLEDs 1006  ]
-[e :U 1007 ]
+[e $ < -> _led `i _NumberOfLEDs 1009  ]
+[e :U 1010 ]
 }
-"170
-[; ;main.c: 170:         Send_LED_EndFrame();
+"175
+[; ;main.c: 175:         Send_LED_EndFrame();
 [e ( _Send_LED_EndFrame ..  ]
-"171
-[; ;main.c: 171:         _delay((unsigned long)((10)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"172
-[; ;main.c: 172:     }
+"176
+[; ;main.c: 176:         _delay((unsigned long)((100)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"177
+[; ;main.c: 177:     }
 }
 [e :U 975 ]
 [e $U 976  ]
 [e :U 977 ]
-"173
-[; ;main.c: 173: }
+"178
+[; ;main.c: 178: }
 [e :UE 974 ]
 }

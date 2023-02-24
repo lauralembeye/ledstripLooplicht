@@ -3,7 +3,7 @@
 [d edition pro ]
 [d chip 16F18346 ]
 [d frameptr 6 ]
-"56 C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
+"57 C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
 [e E6790 states `uc
 GREEN_UP 0
 RED_DOWN 1
@@ -12,26 +12,30 @@ GREEN_DOWN 3
 RED_UP 4
 BLUE_DOWN 5
 ]
-"62
+"63
 [e E6799 count `uc
 UP 0
 DOWN 1
 ]
+"11 C:\Program Files\Microchip\xc8\v2.35\pic\sources\c99\common\rand.c
+[v _rand rand `(i  1 e 2 0 ]
 "10 C:\Program Files\Microchip\xc8\v2.35\pic\sources\c99\common\sprcadd.c
 [v ___fladd __fladd `(d  1 e 4 0 ]
+"15 C:\Program Files\Microchip\xc8\v2.35\pic\sources\c99\common\Umul32.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
 "4 C:\Program Files\Microchip\xc8\v2.35\pic\sources\c99\common\Umul8_16.c
 [v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
 "6 C:\Program Files\Microchip\xc8\v2.35\pic\sources\c99\pic\__eeprom.c
 [v ___eecpymem __eecpymem `(v  1 e 1 0 ]
 "39
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
-"66 C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
+"67 C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
 [v _Send_LED_Frame Send_LED_Frame `(v  1 e 1 0 ]
-"73
+"74
 [v _Send_LED_StartFrame Send_LED_StartFrame `(v  1 e 1 0 ]
-"79
+"80
 [v _Send_LED_EndFrame Send_LED_EndFrame `(v  1 e 1 0 ]
-"85
+"86
 [v _main main `(v  1 e 1 0 ]
 "76 C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
@@ -174,31 +178,48 @@ DOWN 1
 [v _RB6PPSbits RB6PPSbits `VES139  1 e 1 @3742 ]
 "21101
 [v _GIE GIE `VEb  1 e 0 @95 ]
-"51 C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
+"4 C:\Program Files\Microchip\xc8\v2.35\pic\sources\c99\common\rand.c
+[v _seed seed `ul  1 s 4 seed ]
+"52 C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
 [v _blue blue `uc  1 e 1 0 ]
 [v _green green `uc  1 e 1 0 ]
 [v _red red `uc  1 e 1 0 ]
-"56
+"57
 [v _change_color change_color `E6790  1 e 1 0 ]
-"62
-[v _direction direction `E6799  1 e 1 0 ]
 "63
+[v _direction direction `E6799  1 e 1 0 ]
+"64
 [v _led_run led_run `uc  1 e 1 0 ]
-"85
+"86
 [v _main main `(v  1 e 1 0 ]
 {
-"162
-[v main@led led `uc  1 a 1 8 ]
-"173
+"167
+[v main@led led `uc  1 a 1 7 ]
+"178
 } 0
-"73
+"11 C:\Program Files\Microchip\xc8\v2.35\pic\sources\c99\common\rand.c
+[v _rand rand `(i  1 e 2 0 ]
+{
+"15
+} 0
+"15 C:\Program Files\Microchip\xc8\v2.35\pic\sources\c99\common\Umul32.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+{
+"17
+[v ___lmul@product product `ul  1 a 4 8 ]
+"15
+[v ___lmul@multiplier multiplier `ul  1 p 4 0 ]
+[v ___lmul@multiplicand multiplicand `ul  1 p 4 4 ]
+"129
+} 0
+"74 C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
 [v _Send_LED_StartFrame Send_LED_StartFrame `(v  1 e 1 0 ]
 {
-"74
+"75
 [v Send_LED_StartFrame@i i `i  1 a 2 2 ]
-"77
+"78
 } 0
-"66
+"67
 [v _Send_LED_Frame Send_LED_Frame `(v  1 e 1 0 ]
 {
 [v Send_LED_Frame@intensity intensity `uc  1 a 1 wreg ]
@@ -207,14 +228,14 @@ DOWN 1
 [v Send_LED_Frame@green green `uc  1 p 1 2 ]
 [v Send_LED_Frame@red red `uc  1 p 1 3 ]
 [v Send_LED_Frame@intensity intensity `uc  1 a 1 4 ]
-"71
+"72
 } 0
-"79
+"80
 [v _Send_LED_EndFrame Send_LED_EndFrame `(v  1 e 1 0 ]
 {
-"80
+"81
 [v Send_LED_EndFrame@i i `i  1 a 2 2 ]
-"83
+"84
 } 0
 "77 C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\mcc_generated_files/spi1.c
 [v _SPI1_Exchange8bit SPI1_Exchange8bit `(uc  1 e 1 0 ]

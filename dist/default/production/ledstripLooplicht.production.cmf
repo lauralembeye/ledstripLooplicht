@@ -11,32 +11,32 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\Vrijdag\AppData\Local\Temp\xcAsf6s.o
+$C:\Users\Vrijdag\AppData\Local\Temp\xcAsaj8.o
 idloc IDLOC 5 8000 8000 4 2 1
 reset_vec CODE 0 0 0 2 2 1
 end_init CODE 0 2 2 2 2 1
 config CONFIG 4 8007 8007 4 2 1
 $dist/default/production\ledstripLooplicht.production.o
-cinit CODE 0 7F0 7F0 10 2 1
+cinit CODE 0 7EC 7EC 14 2 1
 idloc IDLOC 5 8000 8000 4 2 1
-text1 CODE 0 6C6 6C6 18 2 1
-text2 CODE 0 69B 69B 13 2 1
-text3 CODE 0 6AE 6AE 18 2 1
-text4 CODE 0 683 683 B 2 1
-text5 CODE 0 68E 68E D 2 1
-text6 CODE 0 671 671 4 2 1
-text7 CODE 0 675 675 6 2 1
-text8 CODE 0 6DE 6DE 40 2 1
-text9 CODE 0 67B 67B 8 2 1
-idataCOMMON CODE 0 670 670 1 2 1
-maintext CODE 0 71E 71E D2 2 1
-cstackCOMMON COMMON 1 70 70 9 1 1
+text1 CODE 0 697 697 35 2 1
+text2 CODE 0 664 664 33 2 1
+text3 CODE 0 64C 64C 18 2 1
+text4 CODE 0 621 621 13 2 1
+text5 CODE 0 634 634 18 2 1
+text6 CODE 0 609 609 B 2 1
+text7 CODE 0 614 614 D 2 1
+text8 CODE 0 5F7 5F7 4 2 1
+text9 CODE 0 5FB 5FB 6 2 1
+text10 CODE 0 6CC 6CC 40 2 1
+text11 CODE 0 601 601 8 2 1
+maintext CODE 0 70C 70C E0 2 1
+cstackCOMMON COMMON 1 70 70 E 1 1
+cstackBANK0 BANK0 1 29 29 8 1 1
 stringtext1 STRCODE 0 800 800 2 2 1
-bssBANK0 BANK0 1 20 20 1 1 1
-idataBANK0 CODE 0 66F 66F 1 2 1
-dataBANK0 BANK0 1 21 21 1 1 1
-dataCOMMON COMMON 1 7D 7D 1 1 1
-bssCOMMON COMMON 1 79 79 4 1 1
+bssBANK0 BANK0 1 20 20 9 1 1
+idataBANK0 CODE 0 5F5 5F5 2 2 1
+dataBANK0 BANK0 1 31 31 2 1 1
 config CONFIG 4 8007 8007 4 2 1
 # %UNUSED Section
 # This section enumerates the unused ranges of each CLASS. Each entry
@@ -44,7 +44,7 @@ config CONFIG 4 8007 8007 4 2 1
 #    <class name> <range> <delta>
 # Addresses given in the range are in hexadecimal and units of delta.
 %UNUSED
-RAM 22-6F 1
+RAM 33-6F 1
 RAM A0-EF 1
 RAM 120-16F 1
 RAM 1A0-1EF 1
@@ -70,7 +70,7 @@ RAM B20-B6F 1
 RAM BA0-BEF 1
 RAM C20-C6F 1
 RAM CA0-CBF 1
-BANK0 22-6F 1
+BANK0 33-6F 1
 BANK1 A0-EF 1
 BANK2 120-16F 1
 BANK3 1A0-1EF 1
@@ -80,9 +80,9 @@ BANK6 320-36F 1
 BANK7 3A0-3EF 1
 BANK8 420-46F 1
 BANK9 4A0-4EF 1
-CONST 4-66E 2
+CONST 4-5F4 2
 CONST 802-3FFF 2
-ENTRY 4-66E 2
+ENTRY 4-5F4 2
 ENTRY 802-3FFF 2
 SFR10 500-51F 1
 SFR11 580-59F 1
@@ -106,7 +106,7 @@ SFR28 E00-E6F 1
 SFR29 E80-EEF 1
 SFR30 F00-F6F 1
 SFR31 F80-FEF 1
-CODE 4-66E 2
+CODE 4-5F4 2
 CODE 802-3FFF 2
 SFR0 0-1F 1
 SFR1 80-9F 1
@@ -136,9 +136,9 @@ BANK24 C20-C6F 1
 BANK25 CA0-CBF 1
 BIGRAM 2000-27EF 1
 EEDATA F000-F0FF 2
-STRCODE 4-66E 2
+STRCODE 4-5F4 2
 STRCODE 802-3FFF 2
-STRING 4-66E 2
+STRING 4-5F4 2
 STRING 802-3FFF 2
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
@@ -154,157 +154,178 @@ STRING 802-3FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\ledstripLooplicht.production.o
-7F0 cinit CODE >3765:C:\Users\Vrijdag\AppData\Local\Temp\xcAsf6s.s
-7F0 cinit CODE >3768:C:\Users\Vrijdag\AppData\Local\Temp\xcAsf6s.s
-7F0 cinit CODE >3811:C:\Users\Vrijdag\AppData\Local\Temp\xcAsf6s.s
-7F3 cinit CODE >3812:C:\Users\Vrijdag\AppData\Local\Temp\xcAsf6s.s
-7F4 cinit CODE >3816:C:\Users\Vrijdag\AppData\Local\Temp\xcAsf6s.s
-7F7 cinit CODE >3817:C:\Users\Vrijdag\AppData\Local\Temp\xcAsf6s.s
-7F8 cinit CODE >3822:C:\Users\Vrijdag\AppData\Local\Temp\xcAsf6s.s
-7F9 cinit CODE >3823:C:\Users\Vrijdag\AppData\Local\Temp\xcAsf6s.s
-7FA cinit CODE >3824:C:\Users\Vrijdag\AppData\Local\Temp\xcAsf6s.s
-7FB cinit CODE >3825:C:\Users\Vrijdag\AppData\Local\Temp\xcAsf6s.s
-7FC cinit CODE >3829:C:\Users\Vrijdag\AppData\Local\Temp\xcAsf6s.s
-7FD cinit CODE >3835:C:\Users\Vrijdag\AppData\Local\Temp\xcAsf6s.s
-7FD cinit CODE >3837:C:\Users\Vrijdag\AppData\Local\Temp\xcAsf6s.s
-7FE cinit CODE >3838:C:\Users\Vrijdag\AppData\Local\Temp\xcAsf6s.s
-67B text9 CODE >85:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\mcc_generated_files/mcc.c
-67B text9 CODE >88:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\mcc_generated_files/mcc.c
-67D text9 CODE >90:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\mcc_generated_files/mcc.c
-67E text9 CODE >92:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\mcc_generated_files/mcc.c
-67F text9 CODE >94:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\mcc_generated_files/mcc.c
-681 text9 CODE >96:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\mcc_generated_files/mcc.c
-682 text9 CODE >99:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\mcc_generated_files/mcc.c
-6DE text8 CODE >51:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\mcc_generated_files/pin_manager.c
-6DE text8 CODE >56:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\mcc_generated_files/pin_manager.c
-6E0 text8 CODE >57:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\mcc_generated_files/pin_manager.c
-6E1 text8 CODE >58:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\mcc_generated_files/pin_manager.c
-6E2 text8 CODE >63:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\mcc_generated_files/pin_manager.c
-6E5 text8 CODE >64:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\mcc_generated_files/pin_manager.c
-6E7 text8 CODE >65:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\mcc_generated_files/pin_manager.c
-6E9 text8 CODE >70:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\mcc_generated_files/pin_manager.c
-6EC text8 CODE >71:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\mcc_generated_files/pin_manager.c
-6EE text8 CODE >72:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\mcc_generated_files/pin_manager.c
-6F0 text8 CODE >77:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\mcc_generated_files/pin_manager.c
-6F2 text8 CODE >78:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\mcc_generated_files/pin_manager.c
-6F3 text8 CODE >79:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\mcc_generated_files/pin_manager.c
-6F4 text8 CODE >84:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\mcc_generated_files/pin_manager.c
-6F6 text8 CODE >85:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\mcc_generated_files/pin_manager.c
-6F7 text8 CODE >86:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\mcc_generated_files/pin_manager.c
-6F8 text8 CODE >93:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\mcc_generated_files/pin_manager.c
-6FC text8 CODE >94:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\mcc_generated_files/pin_manager.c
-6FD text8 CODE >95:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\mcc_generated_files/pin_manager.c
-700 text8 CODE >96:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\mcc_generated_files/pin_manager.c
-702 text8 CODE >97:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\mcc_generated_files/pin_manager.c
-703 text8 CODE >99:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\mcc_generated_files/pin_manager.c
-705 text8 CODE >100:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\mcc_generated_files/pin_manager.c
-709 text8 CODE >101:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\mcc_generated_files/pin_manager.c
-70E text8 CODE >102:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\mcc_generated_files/pin_manager.c
-712 text8 CODE >104:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\mcc_generated_files/pin_manager.c
-715 text8 CODE >105:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\mcc_generated_files/pin_manager.c
-717 text8 CODE >106:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\mcc_generated_files/pin_manager.c
-718 text8 CODE >108:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\mcc_generated_files/pin_manager.c
-719 text8 CODE >108:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\mcc_generated_files/pin_manager.c
-71B text8 CODE >108:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\mcc_generated_files/pin_manager.c
-71D text8 CODE >109:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\mcc_generated_files/pin_manager.c
-675 text7 CODE >63:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\mcc_generated_files/spi1.c
-675 text7 CODE >68:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\mcc_generated_files/spi1.c
-677 text7 CODE >71:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\mcc_generated_files/spi1.c
-679 text7 CODE >74:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\mcc_generated_files/spi1.c
-67A text7 CODE >75:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\mcc_generated_files/spi1.c
-671 text6 CODE >101:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\mcc_generated_files/mcc.c
-671 text6 CODE >104:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\mcc_generated_files/mcc.c
-674 text6 CODE >105:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\mcc_generated_files/mcc.c
-68E text5 CODE >76:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\mcc_generated_files/mcc.c
-68E text5 CODE >79:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\mcc_generated_files/mcc.c
-691 text5 CODE >80:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\mcc_generated_files/mcc.c
-694 text5 CODE >81:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\mcc_generated_files/mcc.c
-697 text5 CODE >82:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\mcc_generated_files/mcc.c
-69A text5 CODE >83:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\mcc_generated_files/mcc.c
-683 text4 CODE >77:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\mcc_generated_files/spi1.c
-684 text4 CODE >80:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\mcc_generated_files/spi1.c
-686 text4 CODE >82:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\mcc_generated_files/spi1.c
-688 text4 CODE >84:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\mcc_generated_files/spi1.c
-688 text4 CODE >86:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\mcc_generated_files/spi1.c
-68C text4 CODE >88:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\mcc_generated_files/spi1.c
-68D text4 CODE >89:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\mcc_generated_files/spi1.c
-6AE text3 CODE >79:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
-6AE text3 CODE >80:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
-6B0 text3 CODE >81:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
-6B4 text3 CODE >82:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
-6BD text3 CODE >82:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
-6C1 text3 CODE >82:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
-6C5 text3 CODE >83:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
-69B text2 CODE >66:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
-69C text2 CODE >67:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
-6A1 text2 CODE >68:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
-6A5 text2 CODE >69:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
-6A9 text2 CODE >70:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
-6AD text2 CODE >71:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
-6C6 text1 CODE >73:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
-6C6 text1 CODE >74:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
-6C8 text1 CODE >75:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
-6CC text1 CODE >76:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
-6D5 text1 CODE >76:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
-6D9 text1 CODE >76:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
-6DD text1 CODE >77:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
-71E maintext CODE >85:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
-71E maintext CODE >87:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
-722 maintext CODE >107:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
-724 maintext CODE >107:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
-728 maintext CODE >108:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
-72C maintext CODE >109:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
-72D maintext CODE >110:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
-730 maintext CODE >113:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
-735 maintext CODE >114:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
-737 maintext CODE >115:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
-738 maintext CODE >116:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
-73A maintext CODE >119:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
-740 maintext CODE >119:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
-745 maintext CODE >119:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
-748 maintext CODE >119:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
-74B maintext CODE >122:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
-750 maintext CODE >123:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
-754 maintext CODE >124:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
-755 maintext CODE >125:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
-758 maintext CODE >128:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
-75D maintext CODE >129:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
-75F maintext CODE >130:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
-760 maintext CODE >131:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
-765 maintext CODE >134:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
-76A maintext CODE >135:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
-76E maintext CODE >136:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
-76F maintext CODE >137:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
-774 maintext CODE >140:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
-779 maintext CODE >141:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
-77B maintext CODE >142:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
-77C maintext CODE >143:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
-781 maintext CODE >146:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
-786 maintext CODE >147:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
-78A maintext CODE >148:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
-78B maintext CODE >149:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
-790 maintext CODE >152:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
-795 maintext CODE >153:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
-797 maintext CODE >154:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
-798 maintext CODE >155:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
-79A maintext CODE >158:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
-79F maintext CODE >158:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
-7A4 maintext CODE >158:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
-7A7 maintext CODE >158:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
-7AA maintext CODE >158:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
-7AD maintext CODE >158:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
-7B0 maintext CODE >158:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
-7B3 maintext CODE >158:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
-7B6 maintext CODE >161:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
-7B9 maintext CODE >162:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
-7BA maintext CODE >163:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
-7C0 maintext CODE >164:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
-7D0 maintext CODE >165:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
-7D1 maintext CODE >166:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
-7D8 maintext CODE >168:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
-7DE maintext CODE >168:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
-7E2 maintext CODE >170:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
-7E5 maintext CODE >171:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
+7EC cinit CODE >3765:C:\Users\Vrijdag\AppData\Local\Temp\xcAsaj8.s
+7EC cinit CODE >3768:C:\Users\Vrijdag\AppData\Local\Temp\xcAsaj8.s
+7EC cinit CODE >3809:C:\Users\Vrijdag\AppData\Local\Temp\xcAsaj8.s
+7EF cinit CODE >3810:C:\Users\Vrijdag\AppData\Local\Temp\xcAsaj8.s
+7F0 cinit CODE >3811:C:\Users\Vrijdag\AppData\Local\Temp\xcAsaj8.s
+7F3 cinit CODE >3812:C:\Users\Vrijdag\AppData\Local\Temp\xcAsaj8.s
+7F4 cinit CODE >3817:C:\Users\Vrijdag\AppData\Local\Temp\xcAsaj8.s
+7F5 cinit CODE >3818:C:\Users\Vrijdag\AppData\Local\Temp\xcAsaj8.s
+7F6 cinit CODE >3819:C:\Users\Vrijdag\AppData\Local\Temp\xcAsaj8.s
+7F7 cinit CODE >3820:C:\Users\Vrijdag\AppData\Local\Temp\xcAsaj8.s
+7F8 cinit CODE >3821:C:\Users\Vrijdag\AppData\Local\Temp\xcAsaj8.s
+7F9 cinit CODE >3822:C:\Users\Vrijdag\AppData\Local\Temp\xcAsaj8.s
+7FA cinit CODE >3823:C:\Users\Vrijdag\AppData\Local\Temp\xcAsaj8.s
+7FB cinit CODE >3824:C:\Users\Vrijdag\AppData\Local\Temp\xcAsaj8.s
+7FC cinit CODE >3825:C:\Users\Vrijdag\AppData\Local\Temp\xcAsaj8.s
+7FD cinit CODE >3831:C:\Users\Vrijdag\AppData\Local\Temp\xcAsaj8.s
+7FD cinit CODE >3833:C:\Users\Vrijdag\AppData\Local\Temp\xcAsaj8.s
+7FE cinit CODE >3834:C:\Users\Vrijdag\AppData\Local\Temp\xcAsaj8.s
+601 text11 CODE >85:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\mcc_generated_files/mcc.c
+601 text11 CODE >88:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\mcc_generated_files/mcc.c
+603 text11 CODE >90:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\mcc_generated_files/mcc.c
+604 text11 CODE >92:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\mcc_generated_files/mcc.c
+605 text11 CODE >94:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\mcc_generated_files/mcc.c
+607 text11 CODE >96:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\mcc_generated_files/mcc.c
+608 text11 CODE >99:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\mcc_generated_files/mcc.c
+6CC text10 CODE >51:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\mcc_generated_files/pin_manager.c
+6CC text10 CODE >56:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\mcc_generated_files/pin_manager.c
+6CE text10 CODE >57:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\mcc_generated_files/pin_manager.c
+6CF text10 CODE >58:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\mcc_generated_files/pin_manager.c
+6D0 text10 CODE >63:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\mcc_generated_files/pin_manager.c
+6D3 text10 CODE >64:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\mcc_generated_files/pin_manager.c
+6D5 text10 CODE >65:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\mcc_generated_files/pin_manager.c
+6D7 text10 CODE >70:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\mcc_generated_files/pin_manager.c
+6DA text10 CODE >71:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\mcc_generated_files/pin_manager.c
+6DC text10 CODE >72:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\mcc_generated_files/pin_manager.c
+6DE text10 CODE >77:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\mcc_generated_files/pin_manager.c
+6E0 text10 CODE >78:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\mcc_generated_files/pin_manager.c
+6E1 text10 CODE >79:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\mcc_generated_files/pin_manager.c
+6E2 text10 CODE >84:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\mcc_generated_files/pin_manager.c
+6E4 text10 CODE >85:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\mcc_generated_files/pin_manager.c
+6E5 text10 CODE >86:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\mcc_generated_files/pin_manager.c
+6E6 text10 CODE >93:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\mcc_generated_files/pin_manager.c
+6EA text10 CODE >94:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\mcc_generated_files/pin_manager.c
+6EB text10 CODE >95:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\mcc_generated_files/pin_manager.c
+6EE text10 CODE >96:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\mcc_generated_files/pin_manager.c
+6F0 text10 CODE >97:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\mcc_generated_files/pin_manager.c
+6F1 text10 CODE >99:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\mcc_generated_files/pin_manager.c
+6F3 text10 CODE >100:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\mcc_generated_files/pin_manager.c
+6F7 text10 CODE >101:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\mcc_generated_files/pin_manager.c
+6FC text10 CODE >102:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\mcc_generated_files/pin_manager.c
+700 text10 CODE >104:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\mcc_generated_files/pin_manager.c
+703 text10 CODE >105:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\mcc_generated_files/pin_manager.c
+705 text10 CODE >106:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\mcc_generated_files/pin_manager.c
+706 text10 CODE >108:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\mcc_generated_files/pin_manager.c
+707 text10 CODE >108:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\mcc_generated_files/pin_manager.c
+709 text10 CODE >108:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\mcc_generated_files/pin_manager.c
+70B text10 CODE >109:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\mcc_generated_files/pin_manager.c
+5FB text9 CODE >63:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\mcc_generated_files/spi1.c
+5FB text9 CODE >68:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\mcc_generated_files/spi1.c
+5FD text9 CODE >71:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\mcc_generated_files/spi1.c
+5FF text9 CODE >74:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\mcc_generated_files/spi1.c
+600 text9 CODE >75:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\mcc_generated_files/spi1.c
+5F7 text8 CODE >101:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\mcc_generated_files/mcc.c
+5F7 text8 CODE >104:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\mcc_generated_files/mcc.c
+5FA text8 CODE >105:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\mcc_generated_files/mcc.c
+614 text7 CODE >76:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\mcc_generated_files/mcc.c
+614 text7 CODE >79:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\mcc_generated_files/mcc.c
+617 text7 CODE >80:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\mcc_generated_files/mcc.c
+61A text7 CODE >81:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\mcc_generated_files/mcc.c
+61D text7 CODE >82:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\mcc_generated_files/mcc.c
+620 text7 CODE >83:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\mcc_generated_files/mcc.c
+609 text6 CODE >77:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\mcc_generated_files/spi1.c
+60A text6 CODE >80:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\mcc_generated_files/spi1.c
+60C text6 CODE >82:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\mcc_generated_files/spi1.c
+60E text6 CODE >84:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\mcc_generated_files/spi1.c
+60E text6 CODE >86:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\mcc_generated_files/spi1.c
+612 text6 CODE >88:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\mcc_generated_files/spi1.c
+613 text6 CODE >89:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\mcc_generated_files/spi1.c
+634 text5 CODE >80:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
+634 text5 CODE >81:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
+636 text5 CODE >82:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
+63A text5 CODE >83:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
+643 text5 CODE >83:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
+647 text5 CODE >83:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
+64B text5 CODE >84:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
+621 text4 CODE >67:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
+622 text4 CODE >68:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
+627 text4 CODE >69:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
+62B text4 CODE >70:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
+62F text4 CODE >71:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
+633 text4 CODE >72:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
+64C text3 CODE >74:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
+64C text3 CODE >75:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
+64E text3 CODE >76:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
+652 text3 CODE >77:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
+65B text3 CODE >77:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
+65F text3 CODE >77:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
+663 text3 CODE >78:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
+664 text2 CODE >15:C:\Program Files\Microchip\xc8\v2.35\pic\sources\c99\common\Umul32.c
+664 text2 CODE >119:C:\Program Files\Microchip\xc8\v2.35\pic\sources\c99\common\Umul32.c
+66C text2 CODE >121:C:\Program Files\Microchip\xc8\v2.35\pic\sources\c99\common\Umul32.c
+670 text2 CODE >122:C:\Program Files\Microchip\xc8\v2.35\pic\sources\c99\common\Umul32.c
+678 text2 CODE >123:C:\Program Files\Microchip\xc8\v2.35\pic\sources\c99\common\Umul32.c
+67F text2 CODE >124:C:\Program Files\Microchip\xc8\v2.35\pic\sources\c99\common\Umul32.c
+686 text2 CODE >125:C:\Program Files\Microchip\xc8\v2.35\pic\sources\c99\common\Umul32.c
+68A text2 CODE >125:C:\Program Files\Microchip\xc8\v2.35\pic\sources\c99\common\Umul32.c
+68E text2 CODE >128:C:\Program Files\Microchip\xc8\v2.35\pic\sources\c99\common\Umul32.c
+696 text2 CODE >129:C:\Program Files\Microchip\xc8\v2.35\pic\sources\c99\common\Umul32.c
+697 text1 CODE >11:C:\Program Files\Microchip\xc8\v2.35\pic\sources\c99\common\rand.c
+697 text1 CODE >13:C:\Program Files\Microchip\xc8\v2.35\pic\sources\c99\common\rand.c
+6B8 text1 CODE >14:C:\Program Files\Microchip\xc8\v2.35\pic\sources\c99\common\rand.c
+6CB text1 CODE >15:C:\Program Files\Microchip\xc8\v2.35\pic\sources\c99\common\rand.c
+70C maintext CODE >86:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
+70C maintext CODE >88:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
+710 maintext CODE >108:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
+712 maintext CODE >108:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
+716 maintext CODE >109:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
+71A maintext CODE >110:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
+71B maintext CODE >111:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
+71E maintext CODE >114:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
+723 maintext CODE >115:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
+725 maintext CODE >116:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
+726 maintext CODE >117:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
+728 maintext CODE >120:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
+72E maintext CODE >120:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
+733 maintext CODE >120:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
+736 maintext CODE >120:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
+739 maintext CODE >123:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
+73E maintext CODE >124:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
+742 maintext CODE >125:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
+743 maintext CODE >126:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
+746 maintext CODE >129:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
+74B maintext CODE >130:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
+74D maintext CODE >131:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
+74E maintext CODE >132:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
+753 maintext CODE >135:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
+758 maintext CODE >136:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
+75C maintext CODE >137:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
+75D maintext CODE >138:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
+762 maintext CODE >141:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
+767 maintext CODE >142:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
+769 maintext CODE >143:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
+76A maintext CODE >144:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
+76F maintext CODE >147:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
+774 maintext CODE >148:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
+778 maintext CODE >149:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
+779 maintext CODE >150:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
+77E maintext CODE >153:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
+783 maintext CODE >154:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
+785 maintext CODE >155:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
+786 maintext CODE >156:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
+788 maintext CODE >159:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
+78D maintext CODE >159:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
+792 maintext CODE >159:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
+795 maintext CODE >159:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
+798 maintext CODE >159:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
+79B maintext CODE >159:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
+79E maintext CODE >159:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
+7A1 maintext CODE >159:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
+7A4 maintext CODE >162:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
+7AC maintext CODE >163:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
+7AC maintext CODE >166:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
+7AF maintext CODE >167:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
+7B1 maintext CODE >168:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
+7B3 maintext CODE >168:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
+7B7 maintext CODE >169:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
+7C7 maintext CODE >170:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
+7C8 maintext CODE >171:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
+7CF maintext CODE >173:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
+7D6 maintext CODE >173:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
+7DA maintext CODE >175:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
+7DD maintext CODE >176:C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -328,61 +349,60 @@ __HidataBANK0 0 0 ABS 0 idataBANK0 -
 _SSP1STATbits 214 0 ABS 0 - dist/default/production\ledstripLooplicht.production.o
 __Heeprom_data 0 0 EEDATA 3 eeprom_data -
 Send_LED_Frame@intensity 74 0 COMMON 1 cstackCOMMON dist/default/production\ledstripLooplicht.production.o
-__end_of_WDT_Initialize CEA 0 CODE 0 text6 dist/default/production\ledstripLooplicht.production.o
+__end_of_WDT_Initialize BF6 0 CODE 0 text8 dist/default/production\ledstripLooplicht.production.o
 __Hstrings 0 0 ABS 0 strings -
-__end_of_Send_LED_Frame D5C 0 CODE 0 text2 dist/default/production\ledstripLooplicht.production.o
+__end_of_Send_LED_Frame C68 0 CODE 0 text4 dist/default/production\ledstripLooplicht.production.o
 _LATA 10C 0 ABS 0 - dist/default/production\ledstripLooplicht.production.o
 _LATB 10D 0 ABS 0 - dist/default/production\ledstripLooplicht.production.o
 _LATC 10E 0 ABS 0 - dist/default/production\ledstripLooplicht.production.o
 _WPUA 20C 0 ABS 0 - dist/default/production\ledstripLooplicht.production.o
 _WPUB 20D 0 ABS 0 - dist/default/production\ledstripLooplicht.production.o
 _WPUC 20E 0 ABS 0 - dist/default/production\ledstripLooplicht.production.o
-___sp 0 0 STACK 2 stack C:\Users\Vrijdag\AppData\Local\Temp\xcAsf6s.o
-_blue 7C 0 COMMON 1 bssCOMMON dist/default/production\ledstripLooplicht.production.o
-_main E3C 0 CODE 0 maintext dist/default/production\ledstripLooplicht.production.o
+___sp 0 0 STACK 2 stack C:\Users\Vrijdag\AppData\Local\Temp\xcAsaj8.o
+_blue 24 0 BANK0 1 bssBANK0 dist/default/production\ledstripLooplicht.production.o
+_main E18 0 CODE 0 maintext dist/default/production\ledstripLooplicht.production.o
+_rand D2E 0 CODE 0 text1 dist/default/production\ledstripLooplicht.production.o
+_seed 25 0 BANK0 1 bssBANK0 dist/default/production\ledstripLooplicht.production.o
 btemp 7E 0 ABS 0 - dist/default/production\ledstripLooplicht.production.o
-start 4 0 CODE 0 init C:\Users\Vrijdag\AppData\Local\Temp\xcAsf6s.o
-__HbssCOMMON 0 0 ABS 0 bssCOMMON -
-__end_of_SPI1_Initialize CF6 0 CODE 0 text7 dist/default/production\ledstripLooplicht.production.o
+start 4 0 CODE 0 init C:\Users\Vrijdag\AppData\Local\Temp\xcAsaj8.o
+__end_of_SPI1_Initialize C02 0 CODE 0 text9 dist/default/production\ledstripLooplicht.production.o
+?___lmul 70 0 COMMON 1 cstackCOMMON dist/default/production\ledstripLooplicht.production.o
 __LidataBANK0 0 0 ABS 0 idataBANK0 -
 __Hpowerup 0 0 CODE 0 powerup -
-__HdataCOMMON 0 0 ABS 0 dataCOMMON -
-intlevel0 0 0 ENTRY 0 functab C:\Users\Vrijdag\AppData\Local\Temp\xcAsf6s.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\Vrijdag\AppData\Local\Temp\xcAsf6s.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\Vrijdag\AppData\Local\Temp\xcAsf6s.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\Vrijdag\AppData\Local\Temp\xcAsf6s.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\Vrijdag\AppData\Local\Temp\xcAsf6s.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\Vrijdag\AppData\Local\Temp\xcAsf6s.o
-__LbssCOMMON 0 0 ABS 0 bssCOMMON -
+intlevel0 0 0 ENTRY 0 functab C:\Users\Vrijdag\AppData\Local\Temp\xcAsaj8.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\Vrijdag\AppData\Local\Temp\xcAsaj8.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\Vrijdag\AppData\Local\Temp\xcAsaj8.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\Vrijdag\AppData\Local\Temp\xcAsaj8.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\Vrijdag\AppData\Local\Temp\xcAsaj8.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\Vrijdag\AppData\Local\Temp\xcAsaj8.o
 wtemp0 7E 0 ABS 0 - dist/default/production\ledstripLooplicht.production.o
 __Hfunctab 0 0 ENTRY 0 functab -
 __Hclrtext 0 0 ABS 0 clrtext -
-__pidataCOMMON CE0 0 CODE 0 idataCOMMON dist/default/production\ledstripLooplicht.production.o
-__end_of_Send_LED_EndFrame D8C 0 CODE 0 text3 dist/default/production\ledstripLooplicht.production.o
-_SPI1_Initialize CEA 0 CODE 0 text7 dist/default/production\ledstripLooplicht.production.o
+__end_of_Send_LED_EndFrame C98 0 CODE 0 text5 dist/default/production\ledstripLooplicht.production.o
+_SPI1_Initialize BF6 0 CODE 0 text9 dist/default/production\ledstripLooplicht.production.o
 _ANSELA 18C 0 ABS 0 - dist/default/production\ledstripLooplicht.production.o
 _ANSELB 18D 0 ABS 0 - dist/default/production\ledstripLooplicht.production.o
 _ANSELC 18E 0 ABS 0 - dist/default/production\ledstripLooplicht.production.o
-__LdataCOMMON 0 0 ABS 0 dataCOMMON -
-main@led 78 0 COMMON 1 cstackCOMMON dist/default/production\ledstripLooplicht.production.o
+__end_of___lmul D2E 0 CODE 0 text2 dist/default/production\ledstripLooplicht.production.o
+main@led 30 0 BANK0 1 cstackBANK0 dist/default/production\ledstripLooplicht.production.o
 __Lmaintext 0 0 ABS 0 maintext -
-___stackhi 0 0 ABS 0 - C:\Users\Vrijdag\AppData\Local\Temp\xcAsf6s.o
-___stacklo 0 0 ABS 0 - C:\Users\Vrijdag\AppData\Local\Temp\xcAsf6s.o
+___stackhi 0 0 ABS 0 - C:\Users\Vrijdag\AppData\Local\Temp\xcAsaj8.o
+___stacklo 0 0 ABS 0 - C:\Users\Vrijdag\AppData\Local\Temp\xcAsaj8.o
 PIN_MANAGER_Initialize@state 70 0 COMMON 1 cstackCOMMON dist/default/production\ledstripLooplicht.production.o
-__LidataCOMMON 0 0 ABS 0 idataCOMMON -
-_PIN_MANAGER_Initialize DBC 0 CODE 0 text8 dist/default/production\ledstripLooplicht.production.o
-start_initialization FE0 0 CODE 0 cinit dist/default/production\ledstripLooplicht.production.o
+_PIN_MANAGER_Initialize D98 0 CODE 0 text10 dist/default/production\ledstripLooplicht.production.o
+start_initialization FD8 0 CODE 0 cinit dist/default/production\ledstripLooplicht.production.o
 _ODCONA 28C 0 ABS 0 - dist/default/production\ledstripLooplicht.production.o
 _ODCONB 28D 0 ABS 0 - dist/default/production\ledstripLooplicht.production.o
 _ODCONC 28E 0 ABS 0 - dist/default/production\ledstripLooplicht.production.o
 _OSCFRQ 91F 0 ABS 0 - dist/default/production\ledstripLooplicht.production.o
-_direction 20 0 BANK0 1 bssBANK0 dist/default/production\ledstripLooplicht.production.o
-__end_of_SYSTEM_Initialize D36 0 CODE 0 text5 dist/default/production\ledstripLooplicht.production.o
-_Send_LED_EndFrame D5C 0 CODE 0 text3 dist/default/production\ledstripLooplicht.production.o
+_direction 21 0 BANK0 1 bssBANK0 dist/default/production\ledstripLooplicht.production.o
+__end_of_SYSTEM_Initialize C42 0 CODE 0 text7 dist/default/production\ledstripLooplicht.production.o
+__pcstackBANK0 29 0 BANK0 1 cstackBANK0 dist/default/production\ledstripLooplicht.production.o
+_Send_LED_EndFrame C68 0 CODE 0 text5 dist/default/production\ledstripLooplicht.production.o
 _RB6PPSbits E9E 0 ABS 0 - dist/default/production\ledstripLooplicht.production.o
 Send_LED_StartFrame@i 72 0 COMMON 1 cstackCOMMON dist/default/production\ledstripLooplicht.production.o
 _WDTCON 97 0 ABS 0 - dist/default/production\ledstripLooplicht.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\Vrijdag\AppData\Local\Temp\xcAsf6s.o
+___int_sp 0 0 STACK 2 stack C:\Users\Vrijdag\AppData\Local\Temp\xcAsaj8.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -455,7 +475,7 @@ __Lbank7 0 0 ABS 0 bank7 -
 __Lbank8 0 0 ABS 0 bank8 -
 __Lbank9 0 0 ABS 0 bank9 -
 Send_LED_Frame@red 73 0 COMMON 1 cstackCOMMON dist/default/production\ledstripLooplicht.production.o
-__Lcinit FE0 0 CODE 0 cinit -
+__Lcinit FD8 0 CODE 0 cinit -
 __Lidloc 0 0 IDLOC 5 idloc -
 __Lsfr10 0 0 ABS 0 sfr10 -
 __Lsfr11 0 0 ABS 0 sfr11 -
@@ -514,25 +534,28 @@ __Ltext 0 0 ABS 0 text -
 __pstringtext1 1000 0 STRCODE 0 stringtext1 dist/default/production\ledstripLooplicht.production.o
 _SSP1CON1 215 0 ABS 0 - dist/default/production\ledstripLooplicht.production.o
 _SSP1STAT 214 0 ABS 0 - dist/default/production\ledstripLooplicht.production.o
-__end_of_SPI1_Exchange8bit D1C 0 CODE 0 text4 dist/default/production\ledstripLooplicht.production.o
+___lmul CC8 0 CODE 0 text2 dist/default/production\ledstripLooplicht.production.o
+__end_of_SPI1_Exchange8bit C28 0 CODE 0 text6 dist/default/production\ledstripLooplicht.production.o
+__LcstackBANK0 0 0 ABS 0 cstackBANK0 -
 Send_LED_Frame@green 72 0 COMMON 1 cstackCOMMON dist/default/production\ledstripLooplicht.production.o
 __HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
 _GIE 5F 0 ABS 0 - dist/default/production\ledstripLooplicht.production.o
 __S0 802 0 ABS 0 - -
 __S1 7E 0 ABS 0 - -
 __S3 0 0 ABS 0 - -
-_red 7D 0 COMMON 1 dataCOMMON dist/default/production\ledstripLooplicht.production.o
-__HidataCOMMON 0 0 ABS 0 idataCOMMON -
+_red 32 0 BANK0 1 dataBANK0 dist/default/production\ledstripLooplicht.production.o
 _RB4PPSbits E9C 0 ABS 0 - dist/default/production\ledstripLooplicht.production.o
-_SYSTEM_Initialize D1C 0 CODE 0 text5 dist/default/production\ledstripLooplicht.production.o
+_SYSTEM_Initialize C28 0 CODE 0 text7 dist/default/production\ledstripLooplicht.production.o
 __Lintentry 4 0 CODE 0 intentry -
-reset_vec 0 0 CODE 0 reset_vec C:\Users\Vrijdag\AppData\Local\Temp\xcAsf6s.o
-__pdataBANK0 21 0 BANK0 1 dataBANK0 dist/default/production\ledstripLooplicht.production.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\Vrijdag\AppData\Local\Temp\xcAsaj8.o
+__pdataBANK0 31 0 BANK0 1 dataBANK0 dist/default/production\ledstripLooplicht.production.o
 __LbssBANK0 0 0 ABS 0 bssBANK0 -
-_led_run 79 0 COMMON 1 bssCOMMON dist/default/production\ledstripLooplicht.production.o
-_Send_LED_StartFrame D8C 0 CODE 0 text1 dist/default/production\ledstripLooplicht.production.o
+_led_run 20 0 BANK0 1 bssBANK0 dist/default/production\ledstripLooplicht.production.o
+_Send_LED_StartFrame C98 0 CODE 0 text3 dist/default/production\ledstripLooplicht.production.o
 __Lstringtext1 0 0 ABS 0 stringtext1 -
-__end_of_PIN_MANAGER_Initialize E3C 0 CODE 0 text8 dist/default/production\ledstripLooplicht.production.o
+__ptext10 D98 0 CODE 0 text10 dist/default/production\ledstripLooplicht.production.o
+__ptext11 C02 0 CODE 0 text11 dist/default/production\ledstripLooplicht.production.o
+__end_of_PIN_MANAGER_Initialize E18 0 CODE 0 text10 dist/default/production\ledstripLooplicht.production.o
 __Lbank10 0 0 ABS 0 bank10 -
 __Lbank11 0 0 ABS 0 bank11 -
 __Lbank12 0 0 ABS 0 bank12 -
@@ -557,11 +580,13 @@ __Lbank30 0 0 BANK30 1 bank30 -
 __Lbank31 0 0 BANK31 1 bank31 -
 Send_LED_Frame@blue 71 0 COMMON 1 cstackCOMMON dist/default/production\ledstripLooplicht.production.o
 _SSP1CLKPPSbits E20 0 ABS 0 - dist/default/production\ledstripLooplicht.production.o
-__pmaintext E3C 0 CODE 0 maintext dist/default/production\ledstripLooplicht.production.o
+__pmaintext E18 0 CODE 0 maintext dist/default/production\ledstripLooplicht.production.o
 __Lbigram 0 0 ABS 0 bigram -
+___lmul@multiplier 70 0 COMMON 1 cstackCOMMON dist/default/production\ledstripLooplicht.production.o
+?_rand 7C 0 COMMON 1 cstackCOMMON dist/default/production\ledstripLooplicht.production.o
 __Lcommon 0 0 ABS 0 common -
 __Lconfig 0 0 CONFIG 4 config -
-_SPI1_Exchange8bit D06 0 CODE 0 text4 dist/default/production\ledstripLooplicht.production.o
+_SPI1_Exchange8bit C12 0 CODE 0 text6 dist/default/production\ledstripLooplicht.production.o
 SPI1_Exchange8bit@data 70 0 COMMON 1 cstackCOMMON dist/default/production\ledstripLooplicht.production.o
 _OSCCON1 919 0 ABS 0 - dist/default/production\ledstripLooplicht.production.o
 _OSCCON3 91B 0 ABS 0 - dist/default/production\ledstripLooplicht.production.o
@@ -571,7 +596,7 @@ __Lspace_1 0 0 ABS 0 - -
 __Lspace_2 0 0 ABS 0 - -
 __Lspace_3 0 0 ABS 0 - -
 __Lspace_4 0 0 ABS 0 - -
-__pbssCOMMON 79 0 COMMON 1 bssCOMMON dist/default/production\ledstripLooplicht.production.o
+__HcstackBANK0 0 0 ABS 0 cstackBANK0 -
 __Lend_init 4 0 CODE 0 end_init -
 __LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
 end_of_initialization FFA 0 CODE 0 cinit dist/default/production\ledstripLooplicht.production.o
@@ -580,51 +605,53 @@ _PPSLOCKbits E0F 0 ABS 0 - dist/default/production\ledstripLooplicht.production.
 __Lstrings 0 0 ABS 0 strings -
 __Hreset_vec 4 0 CODE 0 reset_vec -
 __HbssBANK0 0 0 ABS 0 bssBANK0 -
-__ptext1 D8C 0 CODE 0 text1 dist/default/production\ledstripLooplicht.production.o
-__ptext2 D36 0 CODE 0 text2 dist/default/production\ledstripLooplicht.production.o
-__ptext3 D5C 0 CODE 0 text3 dist/default/production\ledstripLooplicht.production.o
-__ptext4 D06 0 CODE 0 text4 dist/default/production\ledstripLooplicht.production.o
-__ptext5 D1C 0 CODE 0 text5 dist/default/production\ledstripLooplicht.production.o
-__ptext6 CE2 0 CODE 0 text6 dist/default/production\ledstripLooplicht.production.o
-__ptext7 CEA 0 CODE 0 text7 dist/default/production\ledstripLooplicht.production.o
-__ptext8 DBC 0 CODE 0 text8 dist/default/production\ledstripLooplicht.production.o
-__ptext9 CF6 0 CODE 0 text9 dist/default/production\ledstripLooplicht.production.o
-__end_of_Send_LED_StartFrame DBC 0 CODE 0 text1 dist/default/production\ledstripLooplicht.production.o
+__ptext1 D2E 0 CODE 0 text1 dist/default/production\ledstripLooplicht.production.o
+__ptext2 CC8 0 CODE 0 text2 dist/default/production\ledstripLooplicht.production.o
+__ptext3 C98 0 CODE 0 text3 dist/default/production\ledstripLooplicht.production.o
+__ptext4 C42 0 CODE 0 text4 dist/default/production\ledstripLooplicht.production.o
+__ptext5 C68 0 CODE 0 text5 dist/default/production\ledstripLooplicht.production.o
+__ptext6 C12 0 CODE 0 text6 dist/default/production\ledstripLooplicht.production.o
+__ptext7 C28 0 CODE 0 text7 dist/default/production\ledstripLooplicht.production.o
+__ptext8 BEE 0 CODE 0 text8 dist/default/production\ledstripLooplicht.production.o
+__ptext9 BF6 0 CODE 0 text9 dist/default/production\ledstripLooplicht.production.o
+__end_of_Send_LED_StartFrame CC8 0 CODE 0 text3 dist/default/production\ledstripLooplicht.production.o
 __Lpowerup 0 0 CODE 0 powerup -
 __Leeprom_data 0 0 EEDATA 3 eeprom_data -
 __Lreset_vec 0 0 CODE 0 reset_vec -
 __Hstringtext1 0 0 ABS 0 stringtext1 -
-___heap_hi 0 0 ABS 0 - C:\Users\Vrijdag\AppData\Local\Temp\xcAsf6s.o
-___heap_lo 0 0 ABS 0 - C:\Users\Vrijdag\AppData\Local\Temp\xcAsf6s.o
+___heap_hi 0 0 ABS 0 - C:\Users\Vrijdag\AppData\Local\Temp\xcAsaj8.o
+___heap_lo 0 0 ABS 0 - C:\Users\Vrijdag\AppData\Local\Temp\xcAsaj8.o
 __end_of__initialization FFA 0 CODE 0 cinit dist/default/production\ledstripLooplicht.production.o
 __Lfunctab 0 0 ENTRY 0 functab -
-__pidataBANK0 CDE 0 CODE 0 idataBANK0 dist/default/production\ledstripLooplicht.production.o
+__pidataBANK0 BEA 0 CODE 0 idataBANK0 dist/default/production\ledstripLooplicht.production.o
 __Lclrtext 0 0 ABS 0 clrtext -
 _SSP1CON1bits 215 0 ABS 0 - dist/default/production\ledstripLooplicht.production.o
+___lmul@product 78 0 COMMON 1 cstackCOMMON dist/default/production\ledstripLooplicht.production.o
+___lmul@multiplicand 74 0 COMMON 1 cstackCOMMON dist/default/production\ledstripLooplicht.production.o
 __pcstackCOMMON 70 0 COMMON 1 cstackCOMMON dist/default/production\ledstripLooplicht.production.o
-_change_color 7A 0 COMMON 1 bssCOMMON dist/default/production\ledstripLooplicht.production.o
+_change_color 22 0 BANK0 1 bssBANK0 dist/default/production\ledstripLooplicht.production.o
 _SSP1ADD 212 0 ABS 0 - dist/default/production\ledstripLooplicht.production.o
 _SSP1BUF 211 0 ABS 0 - dist/default/production\ledstripLooplicht.production.o
 __Hend_init 8 0 CODE 0 end_init -
-__end_of_main FE0 0 CODE 0 maintext dist/default/production\ledstripLooplicht.production.o
+__end_of_main FD8 0 CODE 0 maintext dist/default/production\ledstripLooplicht.production.o
+__end_of_rand D98 0 CODE 0 text1 dist/default/production\ledstripLooplicht.production.o
 _OSCEN 91D 0 ABS 0 - dist/default/production\ledstripLooplicht.production.o
 _TRISA 8C 0 ABS 0 - dist/default/production\ledstripLooplicht.production.o
 _TRISB 8D 0 ABS 0 - dist/default/production\ledstripLooplicht.production.o
 _TRISC 8E 0 ABS 0 - dist/default/production\ledstripLooplicht.production.o
 __Hram 0 0 ABS 0 ram -
 __Lram 0 0 ABS 0 ram -
-_green 7B 0 COMMON 1 bssCOMMON dist/default/production\ledstripLooplicht.production.o
-_WDT_Initialize CE2 0 CODE 0 text6 dist/default/production\ledstripLooplicht.production.o
-_Send_LED_Frame D36 0 CODE 0 text2 dist/default/production\ledstripLooplicht.production.o
+_green 23 0 BANK0 1 bssBANK0 dist/default/production\ledstripLooplicht.production.o
+_WDT_Initialize BEE 0 CODE 0 text8 dist/default/production\ledstripLooplicht.production.o
+_Send_LED_Frame C42 0 CODE 0 text4 dist/default/production\ledstripLooplicht.production.o
 _SSP1DATPPSbits E21 0 ABS 0 - dist/default/production\ledstripLooplicht.production.o
 __HdataBANK0 0 0 ABS 0 dataBANK0 -
-__end_of_OSCILLATOR_Initialize D06 0 CODE 0 text9 dist/default/production\ledstripLooplicht.production.o
+__end_of_OSCILLATOR_Initialize C12 0 CODE 0 text11 dist/default/production\ledstripLooplicht.production.o
 Send_LED_EndFrame@i 72 0 COMMON 1 cstackCOMMON dist/default/production\ledstripLooplicht.production.o
-__initialization FE0 0 CODE 0 cinit dist/default/production\ledstripLooplicht.production.o
+__initialization FD8 0 CODE 0 cinit dist/default/production\ledstripLooplicht.production.o
 __pbssBANK0 20 0 BANK0 1 bssBANK0 dist/default/production\ledstripLooplicht.production.o
-__pdataCOMMON 7D 0 COMMON 1 dataCOMMON dist/default/production\ledstripLooplicht.production.o
 _PPSLOCK E0F 0 ABS 0 - dist/default/production\ledstripLooplicht.production.o
-_OSCILLATOR_Initialize CF6 0 CODE 0 text9 dist/default/production\ledstripLooplicht.production.o
+_OSCILLATOR_Initialize C02 0 CODE 0 text11 dist/default/production\ledstripLooplicht.production.o
 # %SPLITSTAB Section
 # This section enumerates all the psect splits performed by the assembler.
 # The beginning of the section is indicated by %SPLITSTAB.
@@ -650,23 +677,24 @@ _OSCILLATOR_Initialize CF6 0 CODE 0 text9 dist/default/production\ledstripLoopli
 # and size are in units of delta. The file address is in units of bytes.
 # All other numeric quantities are in decimal.
 %SEGMENTS
-cinit 0 7F0 FE0 10 2
-text1 0 6C6 D8C 18 2
-text2 0 69B D36 13 2
-text3 0 6AE D5C 18 2
-text4 0 683 D06 B 2
-text5 0 68E D1C D 2
-text6 0 671 CE2 4 2
-text7 0 675 CEA 6 2
-text8 0 6DE DBC 40 2
-text9 0 67B CF6 8 2
-idataCOMMON 0 670 CE0 1 2
-maintext 0 71E E3C D2 2
+cinit 0 7EC FD8 14 2
+text1 0 697 D2E 35 2
+text2 0 664 CC8 33 2
+text3 0 64C C98 18 2
+text4 0 621 C42 13 2
+text5 0 634 C68 18 2
+text6 0 609 C12 B 2
+text7 0 614 C28 D 2
+text8 0 5F7 BEE 4 2
+text9 0 5FB BF6 6 2
+text10 0 6CC D98 40 2
+text11 0 601 C02 8 2
+maintext 0 70C E18 E0 2
 cstackCOMMON 1 70 70 E 1
 stringtext1 0 800 1000 2 2
 reset_vec 0 0 0 4 2
-bssBANK0 1 20 20 2 1
-idataBANK0 0 66F CDE 1 2
+bssBANK0 1 20 20 13 1
+idataBANK0 0 5F5 BEA 2 2
 # %NOTES Section
 # This section contains data of all the note-psects.  The beginning of the section
 # is indicated by %NOTES. The first line indicates the name and decimal

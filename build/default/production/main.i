@@ -11476,6 +11476,7 @@ void WDT_Initialize(void);
 
 
 
+
 uint8_t blue = 0x00, green = 0x00, red = 0xFF;
 
 enum states {
@@ -11513,7 +11514,7 @@ void Send_LED_EndFrame() {
 void main(void) {
 
     SYSTEM_Initialize();
-# 105 "main.c"
+# 106 "main.c"
     while (1) {
         switch (direction) {
             case UP: if (led_run < NumberOfLEDs - 1) {
@@ -11569,10 +11570,14 @@ void main(void) {
                 break;
         }
 
+        do {
+            led_run = rand();
+        } while (led_run > 60 && led_run < 0);
+
 
         Send_LED_StartFrame();
         for (char led = 0; led < NumberOfLEDs; led++) {
-            if (led == 55) {
+            if (led == led_run) {
                 Send_LED_Frame(0x05, blue, green, red);
             } else {
                 Send_LED_Frame(0x00, 0x00, 0x00, 0x00);
@@ -11580,6 +11585,6 @@ void main(void) {
         }
 
         Send_LED_EndFrame();
-        _delay((unsigned long)((10)*(32000000/4000.0)));
+        _delay((unsigned long)((100)*(32000000/4000.0)));
     }
 }
