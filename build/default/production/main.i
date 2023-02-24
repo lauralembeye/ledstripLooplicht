@@ -11570,9 +11570,7 @@ void main(void) {
                 break;
         }
 
-        do {
-            led_run = rand();
-        } while (led_run > 60 && led_run < 0);
+        led_run = rand()%60;
 
 
         Send_LED_StartFrame();
@@ -11585,6 +11583,6 @@ void main(void) {
         }
 
         Send_LED_EndFrame();
-        _delay((unsigned long)((100)*(32000000/4000.0)));
+        _delay((unsigned long)((10000)*(32000000/4000.0)));
     }
 }

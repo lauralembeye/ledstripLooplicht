@@ -158,9 +158,7 @@ void main(void) {
                 break;
         }
 
-        do {
-            led_run = rand();
-        } while (led_run > 60 && led_run < 0);
+        led_run = rand()%60;
         
         //start frame
         Send_LED_StartFrame();
@@ -173,7 +171,7 @@ void main(void) {
         }
         //stop frame
         Send_LED_EndFrame();
-        __delay_ms(100);
+        __delay_ms(10000);
     }
 }
 /**
