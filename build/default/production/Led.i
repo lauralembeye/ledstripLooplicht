@@ -1,4 +1,4 @@
-# 1 "mcc_generated_files/mcc.c"
+# 1 "Led.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,36 +6,9 @@
 # 1 "<built-in>" 2
 # 1 "C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16F1xxxx_DFP/1.9.163/xc8\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "mcc_generated_files/mcc.c" 2
-# 49 "mcc_generated_files/mcc.c"
-#pragma config FEXTOSC = OFF
-#pragma config RSTOSC = HFINT32
-#pragma config CLKOUTEN = OFF
-#pragma config CSWEN = ON
-#pragma config FCMEN = ON
-
-
-#pragma config MCLRE = ON
-#pragma config PWRTE = OFF
-#pragma config WDTE = OFF
-#pragma config LPBOREN = OFF
-#pragma config BOREN = ON
-#pragma config BORV = LOW
-#pragma config PPS1WAY = ON
-#pragma config STVREN = ON
-#pragma config DEBUG = OFF
-
-
-#pragma config WRT = OFF
-#pragma config LVP = ON
-
-
-#pragma config CP = OFF
-#pragma config CPD = OFF
-
-
-# 1 "mcc_generated_files/mcc.h" 1
-# 48 "mcc_generated_files/mcc.h"
+# 1 "Led.c" 2
+# 1 "./Led.h" 1
+# 34 "./Led.h"
 # 1 "C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16F1xxxx_DFP/1.9.163/xc8\\pic\\include\\xc.h" 1 3
 # 18 "C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16F1xxxx_DFP/1.9.163/xc8\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -11455,21 +11428,33 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 29 "C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16F1xxxx_DFP/1.9.163/xc8\\pic\\include\\xc.h" 2 3
-# 48 "mcc_generated_files/mcc.h" 2
+# 34 "./Led.h" 2
+# 73 "./Led.h"
+    void LED_SetSetpoint(uint8_t value);
+    void LED(void);
+    void Send_LED_Frame(uint8_t intensity, uint8_t blue, uint8_t green, uint8_t red);
+    void Send_LED_StartFrame(void);
+    void Send_LED_EndFrame(void);
+    void LED_Setblue(uint8_t value);
+    void LED_Setgreen(uint8_t value);
+    void LED_Setred(uint8_t value);
+# 1 "Led.c" 2
 
-# 1 "mcc_generated_files/pin_manager.h" 1
-# 132 "mcc_generated_files/pin_manager.h"
+# 1 "./mcc_generated_files/mcc.h" 1
+# 49 "./mcc_generated_files/mcc.h"
+# 1 "./mcc_generated_files/pin_manager.h" 1
+# 132 "./mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_Initialize (void);
-# 144 "mcc_generated_files/pin_manager.h"
+# 144 "./mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_IOC(void);
-# 49 "mcc_generated_files/mcc.h" 2
+# 49 "./mcc_generated_files/mcc.h" 2
 
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.35\\pic\\include\\c99\\stdbool.h" 1 3
-# 51 "mcc_generated_files/mcc.h" 2
+# 51 "./mcc_generated_files/mcc.h" 2
 
-# 1 "mcc_generated_files/eusart.h" 1
-# 56 "mcc_generated_files/eusart.h"
+# 1 "./mcc_generated_files/eusart.h" 1
+# 56 "./mcc_generated_files/eusart.h"
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.35\\pic\\include\\c99\\stdio.h" 1 3
 # 24 "C:\\Program Files\\Microchip\\xc8\\v2.35\\pic\\include\\c99\\stdio.h" 3
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.35\\pic\\include\\c99\\bits/alltypes.h" 1 3
@@ -11614,74 +11599,98 @@ char *ctermid(char *);
 
 
 char *tempnam(const char *, const char *);
-# 56 "mcc_generated_files/eusart.h" 2
-# 95 "mcc_generated_files/eusart.h"
+# 56 "./mcc_generated_files/eusart.h" 2
+# 95 "./mcc_generated_files/eusart.h"
 void EUSART_Initialize(void);
-# 115 "mcc_generated_files/eusart.h"
+# 115 "./mcc_generated_files/eusart.h"
 uint8_t EUSART_Read(void);
-# 135 "mcc_generated_files/eusart.h"
+# 135 "./mcc_generated_files/eusart.h"
 void EUSART_Write(uint8_t txData);
-# 52 "mcc_generated_files/mcc.h" 2
+# 52 "./mcc_generated_files/mcc.h" 2
 
-# 1 "mcc_generated_files/spi1.h" 1
-# 54 "mcc_generated_files/spi1.h"
+# 1 "./mcc_generated_files/spi1.h" 1
+# 54 "./mcc_generated_files/spi1.h"
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.35\\pic\\include\\c99\\stddef.h" 1 3
 # 19 "C:\\Program Files\\Microchip\\xc8\\v2.35\\pic\\include\\c99\\stddef.h" 3
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.35\\pic\\include\\c99\\bits/alltypes.h" 1 3
 # 132 "C:\\Program Files\\Microchip\\xc8\\v2.35\\pic\\include\\c99\\bits/alltypes.h" 3
 typedef int ptrdiff_t;
 # 19 "C:\\Program Files\\Microchip\\xc8\\v2.35\\pic\\include\\c99\\stddef.h" 2 3
-# 54 "mcc_generated_files/spi1.h" 2
-# 116 "mcc_generated_files/spi1.h"
+# 54 "./mcc_generated_files/spi1.h" 2
+# 116 "./mcc_generated_files/spi1.h"
 void SPI1_Initialize(void);
-# 151 "mcc_generated_files/spi1.h"
+# 151 "./mcc_generated_files/spi1.h"
 uint8_t SPI1_Exchange8bit(uint8_t data);
-# 191 "mcc_generated_files/spi1.h"
+# 191 "./mcc_generated_files/spi1.h"
 uint8_t SPI1_Exchange8bitBuffer(uint8_t *dataIn, uint8_t bufLen, uint8_t *dataOut);
-# 214 "mcc_generated_files/spi1.h"
+# 214 "./mcc_generated_files/spi1.h"
 _Bool SPI1_IsBufferFull(void);
-# 239 "mcc_generated_files/spi1.h"
+# 239 "./mcc_generated_files/spi1.h"
 _Bool SPI1_HasWriteCollisionOccured(void);
-# 263 "mcc_generated_files/spi1.h"
+# 263 "./mcc_generated_files/spi1.h"
 void SPI1_ClearWriteCollisionStatus(void);
-# 53 "mcc_generated_files/mcc.h" 2
-# 69 "mcc_generated_files/mcc.h"
+# 53 "./mcc_generated_files/mcc.h" 2
+# 69 "./mcc_generated_files/mcc.h"
 void SYSTEM_Initialize(void);
-# 82 "mcc_generated_files/mcc.h"
+# 82 "./mcc_generated_files/mcc.h"
 void OSCILLATOR_Initialize(void);
-# 95 "mcc_generated_files/mcc.h"
+# 95 "./mcc_generated_files/mcc.h"
 void WDT_Initialize(void);
-# 74 "mcc_generated_files/mcc.c" 2
+# 2 "Led.c" 2
 
 
-void SYSTEM_Initialize(void)
+
+static uint8_t blue = 0x1F, green = 0x1F, red = 0x1F;
+static uint8_t setpoint;
+const int NumberOfLEDs = 60;
+
+void LED_SetSetpoint(uint8_t value)
 {
+    setpoint = value;
+}
+void LED_Setblue(uint8_t value){
 
-    PIN_MANAGER_Initialize();
-    OSCILLATOR_Initialize();
-    WDT_Initialize();
-    SPI1_Initialize();
-    EUSART_Initialize();
+    blue = value;
+}
+void LED_Setgreen(uint8_t value){
+
+    green = value;
+}
+void LED_Setred(uint8_t value){
+
+    red = value;
 }
 
-void OSCILLATOR_Initialize(void)
+void LED(void)
 {
-
-    OSCCON1 = 0x00;
-
-    OSCCON3 = 0x00;
-
-    OSCEN = 0x00;
-
-    OSCFRQ = 0x06;
-
-    OSCTUNE = 0x00;
+    Send_LED_StartFrame();
+    for (char led = 0; led < NumberOfLEDs; led++) {
+        if (led == setpoint) {
+            Send_LED_Frame(0x1F, blue, green , red);
+        } else {
+            Send_LED_Frame(0x00, 0x00, 0x00, 0x00);
+        }
+    }
 
 
+    Send_LED_EndFrame();
 }
 
-void WDT_Initialize(void)
-{
+void Send_LED_Frame(uint8_t intensity, uint8_t blue, uint8_t green, uint8_t red) {
+    SPI1_Exchange8bit(0xE0 | intensity);
+    SPI1_Exchange8bit(blue);
+    SPI1_Exchange8bit(green);
+    SPI1_Exchange8bit(red);
+}
 
-    WDTCON = 0x20;
+void Send_LED_StartFrame(void) {
+    for (int i = 0; i < 4; i++) {
+        SPI1_Exchange8bit(0x00);
+    }
+}
+
+void Send_LED_EndFrame(void) {
+    for (int i = 0; i < 4; i++) {
+        SPI1_Exchange8bit(0xFF);
+    }
 }

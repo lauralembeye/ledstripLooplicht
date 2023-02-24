@@ -11432,15 +11432,170 @@ extern __bank0 __bit __timeout;
 # 48 "./mcc_generated_files/mcc.h" 2
 
 # 1 "./mcc_generated_files/pin_manager.h" 1
-# 108 "./mcc_generated_files/pin_manager.h"
+# 132 "./mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_Initialize (void);
-# 120 "./mcc_generated_files/pin_manager.h"
+# 144 "./mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_IOC(void);
 # 49 "./mcc_generated_files/mcc.h" 2
 
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.35\\pic\\include\\c99\\stdbool.h" 1 3
 # 51 "./mcc_generated_files/mcc.h" 2
+
+# 1 "./mcc_generated_files/eusart.h" 1
+# 56 "./mcc_generated_files/eusart.h"
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.35\\pic\\include\\c99\\stdio.h" 1 3
+# 24 "C:\\Program Files\\Microchip\\xc8\\v2.35\\pic\\include\\c99\\stdio.h" 3
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.35\\pic\\include\\c99\\bits/alltypes.h" 1 3
+
+
+
+
+
+typedef void * va_list[1];
+
+
+
+
+typedef void * __isoc_va_list[1];
+# 137 "C:\\Program Files\\Microchip\\xc8\\v2.35\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef long ssize_t;
+# 246 "C:\\Program Files\\Microchip\\xc8\\v2.35\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef long long off_t;
+# 399 "C:\\Program Files\\Microchip\\xc8\\v2.35\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef struct _IO_FILE FILE;
+# 24 "C:\\Program Files\\Microchip\\xc8\\v2.35\\pic\\include\\c99\\stdio.h" 2 3
+# 52 "C:\\Program Files\\Microchip\\xc8\\v2.35\\pic\\include\\c99\\stdio.h" 3
+typedef union _G_fpos64_t {
+ char __opaque[16];
+ double __align;
+} fpos_t;
+
+extern FILE *const stdin;
+extern FILE *const stdout;
+extern FILE *const stderr;
+
+
+
+
+
+FILE *fopen(const char *restrict, const char *restrict);
+FILE *freopen(const char *restrict, const char *restrict, FILE *restrict);
+int fclose(FILE *);
+
+int remove(const char *);
+int rename(const char *, const char *);
+
+int feof(FILE *);
+int ferror(FILE *);
+int fflush(FILE *);
+void clearerr(FILE *);
+
+int fseek(FILE *, long, int);
+long ftell(FILE *);
+void rewind(FILE *);
+
+int fgetpos(FILE *restrict, fpos_t *restrict);
+int fsetpos(FILE *, const fpos_t *);
+
+size_t fread(void *restrict, size_t, size_t, FILE *restrict);
+size_t fwrite(const void *restrict, size_t, size_t, FILE *restrict);
+
+int fgetc(FILE *);
+int getc(FILE *);
+int getchar(void);
+int ungetc(int, FILE *);
+
+int fputc(int, FILE *);
+int putc(int, FILE *);
+int putchar(int);
+
+char *fgets(char *restrict, int, FILE *restrict);
+
+char *gets(char *);
+
+
+int fputs(const char *restrict, FILE *restrict);
+int puts(const char *);
+
+__attribute__((__format__(__printf__, 1, 2)))
+int printf(const char *restrict, ...);
+__attribute__((__format__(__printf__, 2, 3)))
+int fprintf(FILE *restrict, const char *restrict, ...);
+__attribute__((__format__(__printf__, 2, 3)))
+int sprintf(char *restrict, const char *restrict, ...);
+__attribute__((__format__(__printf__, 3, 4)))
+int snprintf(char *restrict, size_t, const char *restrict, ...);
+
+__attribute__((__format__(__printf__, 1, 0)))
+int vprintf(const char *restrict, __isoc_va_list);
+int vfprintf(FILE *restrict, const char *restrict, __isoc_va_list);
+__attribute__((__format__(__printf__, 2, 0)))
+int vsprintf(char *restrict, const char *restrict, __isoc_va_list);
+__attribute__((__format__(__printf__, 3, 0)))
+int vsnprintf(char *restrict, size_t, const char *restrict, __isoc_va_list);
+
+__attribute__((__format__(__scanf__, 1, 2)))
+int scanf(const char *restrict, ...);
+__attribute__((__format__(__scanf__, 2, 3)))
+int fscanf(FILE *restrict, const char *restrict, ...);
+__attribute__((__format__(__scanf__, 2, 3)))
+int sscanf(const char *restrict, const char *restrict, ...);
+
+__attribute__((__format__(__scanf__, 1, 0)))
+int vscanf(const char *restrict, __isoc_va_list);
+int vfscanf(FILE *restrict, const char *restrict, __isoc_va_list);
+__attribute__((__format__(__scanf__, 2, 0)))
+int vsscanf(const char *restrict, const char *restrict, __isoc_va_list);
+
+void perror(const char *);
+
+int setvbuf(FILE *restrict, char *restrict, int, size_t);
+void setbuf(FILE *restrict, char *restrict);
+
+char *tmpnam(char *);
+FILE *tmpfile(void);
+
+
+
+
+FILE *fmemopen(void *restrict, size_t, const char *restrict);
+FILE *open_memstream(char **, size_t *);
+FILE *fdopen(int, const char *);
+FILE *popen(const char *, const char *);
+int pclose(FILE *);
+int fileno(FILE *);
+int fseeko(FILE *, off_t, int);
+off_t ftello(FILE *);
+int dprintf(int, const char *restrict, ...);
+int vdprintf(int, const char *restrict, __isoc_va_list);
+void flockfile(FILE *);
+int ftrylockfile(FILE *);
+void funlockfile(FILE *);
+int getc_unlocked(FILE *);
+int getchar_unlocked(void);
+int putc_unlocked(int, FILE *);
+int putchar_unlocked(int);
+ssize_t getdelim(char **restrict, size_t *restrict, int, FILE *restrict);
+ssize_t getline(char **restrict, size_t *restrict, FILE *restrict);
+int renameat(int, const char *, int, const char *);
+char *ctermid(char *);
+
+
+
+
+
+
+
+char *tempnam(const char *, const char *);
+# 56 "./mcc_generated_files/eusart.h" 2
+# 95 "./mcc_generated_files/eusart.h"
+void EUSART_Initialize(void);
+# 115 "./mcc_generated_files/eusart.h"
+uint8_t EUSART_Read(void);
+# 135 "./mcc_generated_files/eusart.h"
+void EUSART_Write(uint8_t txData);
+# 52 "./mcc_generated_files/mcc.h" 2
 
 # 1 "./mcc_generated_files/spi1.h" 1
 # 54 "./mcc_generated_files/spi1.h"
@@ -11463,87 +11618,45 @@ _Bool SPI1_IsBufferFull(void);
 _Bool SPI1_HasWriteCollisionOccured(void);
 # 263 "./mcc_generated_files/spi1.h"
 void SPI1_ClearWriteCollisionStatus(void);
-# 52 "./mcc_generated_files/mcc.h" 2
-# 68 "./mcc_generated_files/mcc.h"
+# 53 "./mcc_generated_files/mcc.h" 2
+# 69 "./mcc_generated_files/mcc.h"
 void SYSTEM_Initialize(void);
-# 81 "./mcc_generated_files/mcc.h"
+# 82 "./mcc_generated_files/mcc.h"
 void OSCILLATOR_Initialize(void);
-# 94 "./mcc_generated_files/mcc.h"
+# 95 "./mcc_generated_files/mcc.h"
 void WDT_Initialize(void);
 # 46 "main.c" 2
 
 
+# 1 "./Led.h" 1
+# 73 "./Led.h"
+    void LED_SetSetpoint(uint8_t value);
+    void LED(void);
+    void Send_LED_Frame(uint8_t intensity, uint8_t blue, uint8_t green, uint8_t red);
+    void Send_LED_StartFrame(void);
+    void Send_LED_EndFrame(void);
+    void LED_Setblue(uint8_t value);
+    void LED_Setgreen(uint8_t value);
+    void LED_Setred(uint8_t value);
+# 48 "main.c" 2
+
+# 1 "./UART.h" 1
+# 71 "./UART.h"
+    void UART(void);
+# 49 "main.c" 2
 
 
 
 
-uint8_t blue = 0x1F, green = 0x1F, red = 0x1F;
 
-enum states {
-    GREEN_UP, RED_DOWN, BLUE_UP, GREEN_DOWN, RED_UP, BLUE_DOWN
-};
-enum states change_color = GREEN_UP;
-uint8_t step = 1;
-
-enum count {
-    UP, DOWN
-};
-enum count direction = UP;
-char led_run = 0;
-const int NumberOfLEDs = 60;
-
-void Send_LED_Frame(uint8_t intensity, uint8_t blue, uint8_t green, uint8_t red) {
-    SPI1_Exchange8bit(0xE0 | intensity);
-    SPI1_Exchange8bit(blue);
-    SPI1_Exchange8bit(green);
-    SPI1_Exchange8bit(red);
-}
-
-void Send_LED_StartFrame() {
-    for (int i = 0; i < 4; i++) {
-        SPI1_Exchange8bit(0x00);
-    }
-}
-
-void Send_LED_EndFrame() {
-    for (int i = 0; i < 4; i++) {
-        SPI1_Exchange8bit(0xFF);
-    }
-}
 
 void main(void) {
 
     SYSTEM_Initialize();
-# 106 "main.c"
+# 75 "main.c"
     while (1) {
-        switch (direction) {
-            case UP: if (led_run < NumberOfLEDs - 1) {
-                    led_run++;
-                } else {
-                    direction = DOWN;
-                }
-                break;
-            case DOWN: if (led_run > 0) {
-                    led_run--;
-                } else {
-                    direction = UP;
-                }
-                break;
-        }
-# 162 "main.c"
-            led_run = rand()%NumberOfLEDs;
-
-
-        Send_LED_StartFrame();
-        for (char led = 0; led < NumberOfLEDs; led++) {
-            if (led == led_run) {
-                Send_LED_Frame(0x1F, rand(), rand() , rand());
-            } else {
-                Send_LED_Frame(0x00, 0x00, 0x00, 0x00);
-            }
-        }
-
-        Send_LED_EndFrame();
+        LED();
+        UART();
         _delay((unsigned long)((1000)*(32000000/4000.0)));
     }
 }

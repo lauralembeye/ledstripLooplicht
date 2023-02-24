@@ -1,73 +1,47 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"132 mcc_generated_files/pin_manager.h
-[; ;mcc_generated_files/pin_manager.h: 132: void PIN_MANAGER_Initialize (void);
-[v _PIN_MANAGER_Initialize `(v ~T0 @X0 0 ef ]
-"82 mcc_generated_files/mcc.h
-[; ;mcc_generated_files/mcc.h: 82: void OSCILLATOR_Initialize(void);
-[v _OSCILLATOR_Initialize `(v ~T0 @X0 0 ef ]
-"95
-[; ;mcc_generated_files/mcc.h: 95: void WDT_Initialize(void);
-[v _WDT_Initialize `(v ~T0 @X0 0 ef ]
-"116 mcc_generated_files/spi1.h
-[; ;mcc_generated_files/spi1.h: 116: void SPI1_Initialize(void);
-[v _SPI1_Initialize `(v ~T0 @X0 0 ef ]
-"95 mcc_generated_files/eusart.h
-[; ;mcc_generated_files/eusart.h: 95: void EUSART_Initialize(void);
-[v _EUSART_Initialize `(v ~T0 @X0 0 ef ]
-"12812 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16F1xxxx_DFP/1.9.163/xc8\pic\include\proc\pic16f18346.h
-[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16F1xxxx_DFP/1.9.163/xc8\pic\include\proc\pic16f18346.h: 12812: extern volatile unsigned char OSCCON1 __attribute__((address(0x919)));
-[v _OSCCON1 `Vuc ~T0 @X0 0 e@2329 ]
-"12952
-[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16F1xxxx_DFP/1.9.163/xc8\pic\include\proc\pic16f18346.h: 12952: extern volatile unsigned char OSCCON3 __attribute__((address(0x91B)));
-[v _OSCCON3 `Vuc ~T0 @X0 0 e@2331 ]
-"13049
-[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16F1xxxx_DFP/1.9.163/xc8\pic\include\proc\pic16f18346.h: 13049: extern volatile unsigned char OSCEN __attribute__((address(0x91D)));
-[v _OSCEN `Vuc ~T0 @X0 0 e@2333 ]
-"13153
-[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16F1xxxx_DFP/1.9.163/xc8\pic\include\proc\pic16f18346.h: 13153: extern volatile unsigned char OSCFRQ __attribute__((address(0x91F)));
-[v _OSCFRQ `Vuc ~T0 @X0 0 e@2335 ]
-"13095
-[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16F1xxxx_DFP/1.9.163/xc8\pic\include\proc\pic16f18346.h: 13095: extern volatile unsigned char OSCTUNE __attribute__((address(0x91E)));
-[v _OSCTUNE `Vuc ~T0 @X0 0 e@2334 ]
-"1978
-[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16F1xxxx_DFP/1.9.163/xc8\pic\include\proc\pic16f18346.h: 1978: extern volatile unsigned char WDTCON __attribute__((address(0x097)));
-[v _WDTCON `Vuc ~T0 @X0 0 e@151 ]
-"49 mcc_generated_files/mcc.c
-[p x FEXTOSC  =  OFF     ]
-"50
-[p x RSTOSC  =  HFINT32     ]
-"51
-[p x CLKOUTEN  =  OFF     ]
-"52
-[p x CSWEN  =  ON     ]
-"53
-[p x FCMEN  =  ON     ]
-"56
-[p x MCLRE  =  ON     ]
-"57
-[p x PWRTE  =  OFF     ]
-"58
-[p x WDTE  =  OFF     ]
-"59
-[p x LPBOREN  =  OFF     ]
-"60
-[p x BOREN  =  ON     ]
-"61
-[p x BORV  =  LOW     ]
-"62
-[p x PPS1WAY  =  ON     ]
-"63
-[p x STVREN  =  ON     ]
-"64
-[p x DEBUG  =  OFF     ]
-"67
-[p x WRT  =  OFF     ]
-"68
-[p x LVP  =  ON     ]
-"71
-[p x CP  =  OFF     ]
-"72
-[p x CPD  =  OFF     ]
+"3699 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16F1xxxx_DFP/1.9.163/xc8\pic\include\proc\pic16f18346.h
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16F1xxxx_DFP/1.9.163/xc8\pic\include\proc\pic16f18346.h: 3699: extern volatile unsigned char BAUD1CON __attribute__((address(0x19F)));
+[v _BAUD1CON `Vuc ~T0 @X0 0 e@415 ]
+"3339
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16F1xxxx_DFP/1.9.163/xc8\pic\include\proc\pic16f18346.h: 3339: extern volatile unsigned char RC1STA __attribute__((address(0x19D)));
+[v _RC1STA `Vuc ~T0 @X0 0 e@413 ]
+"3519
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16F1xxxx_DFP/1.9.163/xc8\pic\include\proc\pic16f18346.h: 3519: extern volatile unsigned char TX1STA __attribute__((address(0x19E)));
+[v _TX1STA `Vuc ~T0 @X0 0 e@414 ]
+"3215
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16F1xxxx_DFP/1.9.163/xc8\pic\include\proc\pic16f18346.h: 3215: extern volatile unsigned char SP1BRGL __attribute__((address(0x19B)));
+[v _SP1BRGL `Vuc ~T0 @X0 0 e@411 ]
+"3285
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16F1xxxx_DFP/1.9.163/xc8\pic\include\proc\pic16f18346.h: 3285: extern volatile unsigned char SP1BRGH __attribute__((address(0x19C)));
+[v _SP1BRGH `Vuc ~T0 @X0 0 e@412 ]
+"575
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16F1xxxx_DFP/1.9.163/xc8\pic\include\proc\pic16f18346.h: 575:     struct {
+[s S41 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S41 . TMR1IF TMR2IF BCL1IF SSP1IF TXIF RCIF ADIF TMR1GIF ]
+"574
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16F1xxxx_DFP/1.9.163/xc8\pic\include\proc\pic16f18346.h: 574: typedef union {
+[u S40 `S41 1 ]
+[n S40 . . ]
+"586
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16F1xxxx_DFP/1.9.163/xc8\pic\include\proc\pic16f18346.h: 586: extern volatile PIR1bits_t PIR1bits __attribute__((address(0x011)));
+[v _PIR1bits `VS40 ~T0 @X0 0 e@17 ]
+"3354
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16F1xxxx_DFP/1.9.163/xc8\pic\include\proc\pic16f18346.h: 3354:     struct {
+[s S182 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S182 . RX9D OERR FERR ADDEN CREN SREN RX9 SPEN ]
+"3353
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16F1xxxx_DFP/1.9.163/xc8\pic\include\proc\pic16f18346.h: 3353: typedef union {
+[u S181 `S182 1 ]
+[n S181 . . ]
+"3365
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16F1xxxx_DFP/1.9.163/xc8\pic\include\proc\pic16f18346.h: 3365: extern volatile RC1STAbits_t RC1STAbits __attribute__((address(0x19D)));
+[v _RC1STAbits `VS181 ~T0 @X0 0 e@413 ]
+"3100
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16F1xxxx_DFP/1.9.163/xc8\pic\include\proc\pic16f18346.h: 3100: extern volatile unsigned char RC1REG __attribute__((address(0x199)));
+[v _RC1REG `Vuc ~T0 @X0 0 e@409 ]
+"3154
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16F1xxxx_DFP/1.9.163/xc8\pic\include\proc\pic16f18346.h: 3154: extern volatile unsigned char TX1REG __attribute__((address(0x19A)));
+[v _TX1REG `Vuc ~T0 @X0 0 e@410 ]
 "55 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16F1xxxx_DFP/1.9.163/xc8\pic\include\proc\pic16f18346.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16F1xxxx_DFP/1.9.163/xc8\pic\include\proc\pic16f18346.h: 55: __asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
@@ -1127,72 +1101,148 @@ Version 4.0 HI-TECH Software Intermediate Code
 "19975
 [; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16F1xxxx_DFP/1.9.163/xc8\pic\include\proc\pic16f18346.h: 19975: __asm("TOSH equ 0FEFh");
 [; <" TOSH equ 0FEFh ;# ">
-"76 mcc_generated_files/mcc.c
-[; ;mcc_generated_files/mcc.c: 76: void SYSTEM_Initialize(void)
-[v _SYSTEM_Initialize `(v ~T0 @X0 1 ef ]
-"77
-[; ;mcc_generated_files/mcc.c: 77: {
+"55 mcc_generated_files/eusart.c
+[; ;mcc_generated_files/eusart.c: 55: void EUSART_Initialize(void)
+[v _EUSART_Initialize `(v ~T0 @X0 1 ef ]
+"56
+[; ;mcc_generated_files/eusart.c: 56: {
 {
-[e :U _SYSTEM_Initialize ]
+[e :U _EUSART_Initialize ]
 [f ]
-"79
-[; ;mcc_generated_files/mcc.c: 79:     PIN_MANAGER_Initialize();
-[e ( _PIN_MANAGER_Initialize ..  ]
-"80
-[; ;mcc_generated_files/mcc.c: 80:     OSCILLATOR_Initialize();
-[e ( _OSCILLATOR_Initialize ..  ]
-"81
-[; ;mcc_generated_files/mcc.c: 81:     WDT_Initialize();
-[e ( _WDT_Initialize ..  ]
-"82
-[; ;mcc_generated_files/mcc.c: 82:     SPI1_Initialize();
-[e ( _SPI1_Initialize ..  ]
-"83
-[; ;mcc_generated_files/mcc.c: 83:     EUSART_Initialize();
-[e ( _EUSART_Initialize ..  ]
-"84
-[; ;mcc_generated_files/mcc.c: 84: }
+"60
+[; ;mcc_generated_files/eusart.c: 60:     BAUD1CON = 0x09;
+[e = _BAUD1CON -> -> 9 `i `uc ]
+"63
+[; ;mcc_generated_files/eusart.c: 63:     RC1STA = 0x90;
+[e = _RC1STA -> -> 144 `i `uc ]
+"66
+[; ;mcc_generated_files/eusart.c: 66:     TX1STA = 0x24;
+[e = _TX1STA -> -> 36 `i `uc ]
+"69
+[; ;mcc_generated_files/eusart.c: 69:     SP1BRGL = 0x44;
+[e = _SP1BRGL -> -> 68 `i `uc ]
+"72
+[; ;mcc_generated_files/eusart.c: 72:     SP1BRGH = 0x00;
+[e = _SP1BRGH -> -> 0 `i `uc ]
+"74
+[; ;mcc_generated_files/eusart.c: 74: }
 [e :UE 967 ]
 }
-"86
-[; ;mcc_generated_files/mcc.c: 86: void OSCILLATOR_Initialize(void)
-[v _OSCILLATOR_Initialize `(v ~T0 @X0 1 ef ]
-"87
-[; ;mcc_generated_files/mcc.c: 87: {
+"77
+[; ;mcc_generated_files/eusart.c: 77: uint8_t EUSART_Read(void)
+[v _EUSART_Read `(uc ~T0 @X0 1 ef ]
+"78
+[; ;mcc_generated_files/eusart.c: 78: {
 {
-[e :U _OSCILLATOR_Initialize ]
+[e :U _EUSART_Read ]
 [f ]
+"80
+[; ;mcc_generated_files/eusart.c: 80:     while(!PIR1bits.RCIF)
+[e $U 969  ]
+[e :U 970 ]
+"81
+[; ;mcc_generated_files/eusart.c: 81:     {
+{
+"82
+[; ;mcc_generated_files/eusart.c: 82:     }
+}
+[e :U 969 ]
+"80
+[; ;mcc_generated_files/eusart.c: 80:     while(!PIR1bits.RCIF)
+[e $ ! != -> . . _PIR1bits 0 5 `i -> 0 `i 970  ]
+[e :U 971 ]
+"85
+[; ;mcc_generated_files/eusart.c: 85:     if(1 == RC1STAbits.OERR)
+[e $ ! == -> 1 `i -> . . _RC1STAbits 0 1 `i 972  ]
+"86
+[; ;mcc_generated_files/eusart.c: 86:     {
+{
 "89
-[; ;mcc_generated_files/mcc.c: 89:     OSCCON1 = 0x00;
-[e = _OSCCON1 -> -> 0 `i `uc ]
+[; ;mcc_generated_files/eusart.c: 89:         RC1STAbits.CREN = 0;
+[e = . . _RC1STAbits 0 4 -> -> 0 `i `uc ]
+"90
+[; ;mcc_generated_files/eusart.c: 90:         RC1STAbits.CREN = 1;
+[e = . . _RC1STAbits 0 4 -> -> 1 `i `uc ]
 "91
-[; ;mcc_generated_files/mcc.c: 91:     OSCCON3 = 0x00;
-[e = _OSCCON3 -> -> 0 `i `uc ]
+[; ;mcc_generated_files/eusart.c: 91:     }
+}
+[e :U 972 ]
 "93
-[; ;mcc_generated_files/mcc.c: 93:     OSCEN = 0x00;
-[e = _OSCEN -> -> 0 `i `uc ]
-"95
-[; ;mcc_generated_files/mcc.c: 95:     OSCFRQ = 0x06;
-[e = _OSCFRQ -> -> 6 `i `uc ]
-"97
-[; ;mcc_generated_files/mcc.c: 97:     OSCTUNE = 0x00;
-[e = _OSCTUNE -> -> 0 `i `uc ]
-"100
-[; ;mcc_generated_files/mcc.c: 100: }
+[; ;mcc_generated_files/eusart.c: 93:     return RC1REG;
+[e ) _RC1REG ]
+[e $UE 968  ]
+"94
+[; ;mcc_generated_files/eusart.c: 94: }
 [e :UE 968 ]
 }
-"102
-[; ;mcc_generated_files/mcc.c: 102: void WDT_Initialize(void)
-[v _WDT_Initialize `(v ~T0 @X0 1 ef ]
-"103
-[; ;mcc_generated_files/mcc.c: 103: {
+"96
+[; ;mcc_generated_files/eusart.c: 96: void EUSART_Write(uint8_t txData)
+[v _EUSART_Write `(v ~T0 @X0 1 ef1`uc ]
+"97
+[; ;mcc_generated_files/eusart.c: 97: {
 {
-[e :U _WDT_Initialize ]
+[e :U _EUSART_Write ]
+"96
+[; ;mcc_generated_files/eusart.c: 96: void EUSART_Write(uint8_t txData)
+[v _txData `uc ~T0 @X0 1 r1 ]
+"97
+[; ;mcc_generated_files/eusart.c: 97: {
 [f ]
+"98
+[; ;mcc_generated_files/eusart.c: 98:     while(0 == PIR1bits.TXIF)
+[e $U 974  ]
+[e :U 975 ]
+"99
+[; ;mcc_generated_files/eusart.c: 99:     {
+{
+"100
+[; ;mcc_generated_files/eusart.c: 100:     }
+}
+[e :U 974 ]
+"98
+[; ;mcc_generated_files/eusart.c: 98:     while(0 == PIR1bits.TXIF)
+[e $ == -> 0 `i -> . . _PIR1bits 0 4 `i 975  ]
+[e :U 976 ]
+"102
+[; ;mcc_generated_files/eusart.c: 102:     TX1REG = txData;
+[e = _TX1REG _txData ]
+"103
+[; ;mcc_generated_files/eusart.c: 103: }
+[e :UE 973 ]
+}
 "105
-[; ;mcc_generated_files/mcc.c: 105:     WDTCON = 0x20;
-[e = _WDTCON -> -> 32 `i `uc ]
+[; ;mcc_generated_files/eusart.c: 105: char getch(void)
+[v _getch `(uc ~T0 @X0 1 ef ]
 "106
-[; ;mcc_generated_files/mcc.c: 106: }
-[e :UE 969 ]
+[; ;mcc_generated_files/eusart.c: 106: {
+{
+[e :U _getch ]
+[f ]
+"107
+[; ;mcc_generated_files/eusart.c: 107:     return EUSART_Read();
+[e ) -> ( _EUSART_Read ..  `uc ]
+[e $UE 977  ]
+"108
+[; ;mcc_generated_files/eusart.c: 108: }
+[e :UE 977 ]
+}
+"110
+[; ;mcc_generated_files/eusart.c: 110: void putch(char txData)
+[v _putch `(v ~T0 @X0 1 ef1`uc ]
+"111
+[; ;mcc_generated_files/eusart.c: 111: {
+{
+[e :U _putch ]
+"110
+[; ;mcc_generated_files/eusart.c: 110: void putch(char txData)
+[v _txData `uc ~T0 @X0 1 r1 ]
+"111
+[; ;mcc_generated_files/eusart.c: 111: {
+[f ]
+"112
+[; ;mcc_generated_files/eusart.c: 112:     EUSART_Write(txData);
+[e ( _EUSART_Write (1 -> _txData `uc ]
+"113
+[; ;mcc_generated_files/eusart.c: 113: }
+[e :UE 978 ]
 }

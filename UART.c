@@ -4,18 +4,18 @@
 
 #include <xc.h>
 #include "mcc_generated_files/mcc.h"
-#include "PI.h"
 #include <stdlib.h> //for atoi and atof functions
 #include <ctype.h> //for toupper command
+#include "Led.h"
 
 /**
   Section: UART Module APIs
  */
 
-static uint8_t sensorHeight;
-static uint8_t setpoint; //240 = top, 0 = bottom
-static float ki;
-static float kp;
+static char setpoint;
+static char blue;
+static char green;
+static char red;
 
 static char command;
 static int index;
@@ -41,17 +41,21 @@ void UART(void) {
         }
 
         switch (command) {
-            case 'S': //Setpoint                            
-                setpoint = (uint8_t) atoi(value); //atoi = ASCII to integer
-                PI_SetSetpoint(setpoint);
+            case 'L':                            
+                //setpoint = (uint8_t) atoi(value); //atoi = ASCII to integer
+                LED_SetSetpoint(setpoint);
                 break;
-            case 'P': //Proportional                           
-                kp = (float) atof(value); //atof = ASCII to float
-                PI_SetKp(kp);
+            case 'b':                           
+                //Send_LED_Frame()
+                LED_Setblue(blue);
                 break;
-            case 'I': //Integrate                                           
-                ki = (float) atof(value);
-                PI_SetKi(ki);
+            case 'g':                                          
+                //Send_LED_Frame()
+                LED_Setgreen(green);
+                break;
+            case 'r':                                          
+                //Send_LED_Frame()
+                LED_Setred(red);
                 break;
         };
     }

@@ -14,7 +14,7 @@
     This header file provides implementations for driver APIs for all modules selected in the GUI.
     Generation Information :
         Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs  - 1.26.1
-        Device            :  PIC16F18345
+        Device            :  PIC16F18346
         Driver Version    :  1.02
     The generated drivers are tested against the following:
         Compiler          :  XC8 1.35
@@ -80,6 +80,7 @@ void SYSTEM_Initialize(void)
     OSCILLATOR_Initialize();
     WDT_Initialize();
     SPI1_Initialize();
+    EUSART_Initialize();
 }
 
 void OSCILLATOR_Initialize(void)

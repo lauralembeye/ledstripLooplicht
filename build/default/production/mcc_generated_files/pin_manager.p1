@@ -91,6 +91,21 @@ Version 4.0 HI-TECH Software Intermediate Code
 "14068
 [; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16F1xxxx_DFP/1.9.163/xc8\pic\include\proc\pic16f18346.h: 14068: extern volatile SSP1CLKPPSbits_t SSP1CLKPPSbits __attribute__((address(0xE20)));
 [v _SSP1CLKPPSbits `VS695 ~T0 @X0 0 e@3616 ]
+"14213
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16F1xxxx_DFP/1.9.163/xc8\pic\include\proc\pic16f18346.h: 14213:     struct {
+[s S705 :5 `uc 1 ]
+[n S705 . RXPPS ]
+"14216
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16F1xxxx_DFP/1.9.163/xc8\pic\include\proc\pic16f18346.h: 14216:     struct {
+[s S706 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S706 . RXDTPPS0 RXDTPPS1 RXDTPPS2 RXDTPPS3 RXDTPPS4 ]
+"14212
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16F1xxxx_DFP/1.9.163/xc8\pic\include\proc\pic16f18346.h: 14212: typedef union {
+[u S704 `S705 1 `S706 1 ]
+[n S704 . . . ]
+"14224
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16F1xxxx_DFP/1.9.163/xc8\pic\include\proc\pic16f18346.h: 14224: extern volatile RXPPSbits_t RXPPSbits __attribute__((address(0xE24)));
+[v _RXPPSbits `VS704 ~T0 @X0 0 e@3620 ]
 "14865
 [; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16F1xxxx_DFP/1.9.163/xc8\pic\include\proc\pic16f18346.h: 14865:     struct {
 [s S746 :5 `uc 1 ]
@@ -106,6 +121,21 @@ Version 4.0 HI-TECH Software Intermediate Code
 "14876
 [; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16F1xxxx_DFP/1.9.163/xc8\pic\include\proc\pic16f18346.h: 14876: extern volatile RB4PPSbits_t RB4PPSbits __attribute__((address(0xE9C)));
 [v _RB4PPSbits `VS745 ~T0 @X0 0 e@3740 ]
+"15021
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16F1xxxx_DFP/1.9.163/xc8\pic\include\proc\pic16f18346.h: 15021:     struct {
+[s S755 :5 `uc 1 ]
+[n S755 . RB7PPS ]
+"15024
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16F1xxxx_DFP/1.9.163/xc8\pic\include\proc\pic16f18346.h: 15024:     struct {
+[s S756 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S756 . RB7PPS0 RB7PPS1 RB7PPS2 RB7PPS3 RB7PPS4 ]
+"15020
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16F1xxxx_DFP/1.9.163/xc8\pic\include\proc\pic16f18346.h: 15020: typedef union {
+[u S754 `S755 1 `S756 1 ]
+[n S754 . . . ]
+"15032
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16F1xxxx_DFP/1.9.163/xc8\pic\include\proc\pic16f18346.h: 15032: extern volatile RB7PPSbits_t RB7PPSbits __attribute__((address(0xE9F)));
+[v _RB7PPSbits `VS754 ~T0 @X0 0 e@3743 ]
 "14969
 [; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16F1xxxx_DFP/1.9.163/xc8\pic\include\proc\pic16f18346.h: 14969:     struct {
 [s S752 :5 `uc 1 ]
@@ -1201,8 +1231,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;mcc_generated_files/pin_manager.c: 63:     TRISA = 0x37;
 [e = _TRISA -> -> 55 `i `uc ]
 "64
-[; ;mcc_generated_files/pin_manager.c: 64:     TRISB = 0xA0;
-[e = _TRISB -> -> 160 `i `uc ]
+[; ;mcc_generated_files/pin_manager.c: 64:     TRISB = 0x20;
+[e = _TRISB -> -> 32 `i `uc ]
 "65
 [; ;mcc_generated_files/pin_manager.c: 65:     TRISC = 0xFF;
 [e = _TRISC -> -> 255 `i `uc ]
@@ -1210,8 +1240,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;mcc_generated_files/pin_manager.c: 70:     ANSELC = 0xFF;
 [e = _ANSELC -> -> 255 `i `uc ]
 "71
-[; ;mcc_generated_files/pin_manager.c: 71:     ANSELB = 0xA0;
-[e = _ANSELB -> -> 160 `i `uc ]
+[; ;mcc_generated_files/pin_manager.c: 71:     ANSELB = 0x80;
+[e = _ANSELB -> -> 128 `i `uc ]
 "72
 [; ;mcc_generated_files/pin_manager.c: 72:     ANSELA = 0x36;
 [e = _ANSELA -> -> 54 `i `uc ]
@@ -1256,36 +1286,42 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;mcc_generated_files/pin_manager.c: 100:     SSP1CLKPPSbits.SSP1CLKPPS = 0x0E;
 [e = . . _SSP1CLKPPSbits 0 0 -> -> 14 `i `uc ]
 "101
-[; ;mcc_generated_files/pin_manager.c: 101:     RB4PPSbits.RB4PPS = 0x19;
-[e = . . _RB4PPSbits 0 0 -> -> 25 `i `uc ]
+[; ;mcc_generated_files/pin_manager.c: 101:     RXPPSbits.RXPPS = 0x0D;
+[e = . . _RXPPSbits 0 0 -> -> 13 `i `uc ]
 "102
-[; ;mcc_generated_files/pin_manager.c: 102:     RB6PPSbits.RB6PPS = 0x18;
-[e = . . _RB6PPSbits 0 0 -> -> 24 `i `uc ]
+[; ;mcc_generated_files/pin_manager.c: 102:     RB4PPSbits.RB4PPS = 0x19;
+[e = . . _RB4PPSbits 0 0 -> -> 25 `i `uc ]
+"103
+[; ;mcc_generated_files/pin_manager.c: 103:     RB7PPSbits.RB7PPS = 0x14;
+[e = . . _RB7PPSbits 0 0 -> -> 20 `i `uc ]
 "104
-[; ;mcc_generated_files/pin_manager.c: 104:     PPSLOCK = 0x55;
-[e = _PPSLOCK -> -> 85 `i `uc ]
-"105
-[; ;mcc_generated_files/pin_manager.c: 105:     PPSLOCK = 0xAA;
-[e = _PPSLOCK -> -> 170 `i `uc ]
+[; ;mcc_generated_files/pin_manager.c: 104:     RB6PPSbits.RB6PPS = 0x18;
+[e = . . _RB6PPSbits 0 0 -> -> 24 `i `uc ]
 "106
-[; ;mcc_generated_files/pin_manager.c: 106:     PPSLOCKbits.PPSLOCKED = 0x01;
-[e = . . _PPSLOCKbits 0 0 -> -> 1 `i `uc ]
+[; ;mcc_generated_files/pin_manager.c: 106:     PPSLOCK = 0x55;
+[e = _PPSLOCK -> -> 85 `i `uc ]
+"107
+[; ;mcc_generated_files/pin_manager.c: 107:     PPSLOCK = 0xAA;
+[e = _PPSLOCK -> -> 170 `i `uc ]
 "108
-[; ;mcc_generated_files/pin_manager.c: 108:     GIE = state;
+[; ;mcc_generated_files/pin_manager.c: 108:     PPSLOCKbits.PPSLOCKED = 0x01;
+[e = . . _PPSLOCKbits 0 0 -> -> 1 `i `uc ]
+"110
+[; ;mcc_generated_files/pin_manager.c: 110:     GIE = state;
 [e = _GIE _state ]
-"109
-[; ;mcc_generated_files/pin_manager.c: 109: }
+"111
+[; ;mcc_generated_files/pin_manager.c: 111: }
 [e :UE 965 ]
 }
-"111
-[; ;mcc_generated_files/pin_manager.c: 111: void PIN_MANAGER_IOC(void)
+"113
+[; ;mcc_generated_files/pin_manager.c: 113: void PIN_MANAGER_IOC(void)
 [v _PIN_MANAGER_IOC `(v ~T0 @X0 1 ef ]
-"112
-[; ;mcc_generated_files/pin_manager.c: 112: {
+"114
+[; ;mcc_generated_files/pin_manager.c: 114: {
 {
 [e :U _PIN_MANAGER_IOC ]
 [f ]
-"114
-[; ;mcc_generated_files/pin_manager.c: 114: }
+"116
+[; ;mcc_generated_files/pin_manager.c: 116: }
 [e :UE 966 ]
 }

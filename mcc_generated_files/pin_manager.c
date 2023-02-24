@@ -14,7 +14,7 @@
     This header file provides implementations for pin APIs for all pins selected in the GUI.
     Generation Information :
         Product Revision  :  MPLAB(c) Code Configurator - 4.85.1
-        Device            :  PIC16F18345
+        Device            :  PIC16F18346
         Driver Version    :  1.02
     The generated drivers are tested against the following:
         Compiler          :  XC8 1.35
@@ -61,14 +61,14 @@ void PIN_MANAGER_Initialize(void)
     TRISx registers
     */    
     TRISA = 0x37;
-    TRISB = 0xA0;
+    TRISB = 0x20;
     TRISC = 0xFF;
 
     /**
     ANSELx registers
     */   
     ANSELC = 0xFF;
-    ANSELB = 0xA0;
+    ANSELB = 0x80;
     ANSELA = 0x36;
 
     /**
@@ -98,7 +98,9 @@ void PIN_MANAGER_Initialize(void)
 
     SSP1DATPPSbits.SSP1DATPPS = 0x00;   //RA0->MSSP1:SDI1;
     SSP1CLKPPSbits.SSP1CLKPPS = 0x0E;   //RB6->MSSP1:SCK1;
+    RXPPSbits.RXPPS = 0x0D;   //RB5->EUSART:RX;
     RB4PPSbits.RB4PPS = 0x19;   //RB4->MSSP1:SDO1;
+    RB7PPSbits.RB7PPS = 0x14;   //RB7->EUSART:TX;
     RB6PPSbits.RB6PPS = 0x18;   //RB6->MSSP1:SCK1;
 
     PPSLOCK = 0x55;

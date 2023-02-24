@@ -1,73 +1,37 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"132 mcc_generated_files/pin_manager.h
-[; ;mcc_generated_files/pin_manager.h: 132: void PIN_MANAGER_Initialize (void);
-[v _PIN_MANAGER_Initialize `(v ~T0 @X0 0 ef ]
-"82 mcc_generated_files/mcc.h
-[; ;mcc_generated_files/mcc.h: 82: void OSCILLATOR_Initialize(void);
-[v _OSCILLATOR_Initialize `(v ~T0 @X0 0 ef ]
-"95
-[; ;mcc_generated_files/mcc.h: 95: void WDT_Initialize(void);
-[v _WDT_Initialize `(v ~T0 @X0 0 ef ]
-"116 mcc_generated_files/spi1.h
-[; ;mcc_generated_files/spi1.h: 116: void SPI1_Initialize(void);
-[v _SPI1_Initialize `(v ~T0 @X0 0 ef ]
-"95 mcc_generated_files/eusart.h
-[; ;mcc_generated_files/eusart.h: 95: void EUSART_Initialize(void);
-[v _EUSART_Initialize `(v ~T0 @X0 0 ef ]
-"12812 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16F1xxxx_DFP/1.9.163/xc8\pic\include\proc\pic16f18346.h
-[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16F1xxxx_DFP/1.9.163/xc8\pic\include\proc\pic16f18346.h: 12812: extern volatile unsigned char OSCCON1 __attribute__((address(0x919)));
-[v _OSCCON1 `Vuc ~T0 @X0 0 e@2329 ]
-"12952
-[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16F1xxxx_DFP/1.9.163/xc8\pic\include\proc\pic16f18346.h: 12952: extern volatile unsigned char OSCCON3 __attribute__((address(0x91B)));
-[v _OSCCON3 `Vuc ~T0 @X0 0 e@2331 ]
-"13049
-[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16F1xxxx_DFP/1.9.163/xc8\pic\include\proc\pic16f18346.h: 13049: extern volatile unsigned char OSCEN __attribute__((address(0x91D)));
-[v _OSCEN `Vuc ~T0 @X0 0 e@2333 ]
-"13153
-[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16F1xxxx_DFP/1.9.163/xc8\pic\include\proc\pic16f18346.h: 13153: extern volatile unsigned char OSCFRQ __attribute__((address(0x91F)));
-[v _OSCFRQ `Vuc ~T0 @X0 0 e@2335 ]
-"13095
-[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16F1xxxx_DFP/1.9.163/xc8\pic\include\proc\pic16f18346.h: 13095: extern volatile unsigned char OSCTUNE __attribute__((address(0x91E)));
-[v _OSCTUNE `Vuc ~T0 @X0 0 e@2334 ]
-"1978
-[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16F1xxxx_DFP/1.9.163/xc8\pic\include\proc\pic16f18346.h: 1978: extern volatile unsigned char WDTCON __attribute__((address(0x097)));
-[v _WDTCON `Vuc ~T0 @X0 0 e@151 ]
-"49 mcc_generated_files/mcc.c
-[p x FEXTOSC  =  OFF     ]
-"50
-[p x RSTOSC  =  HFINT32     ]
-"51
-[p x CLKOUTEN  =  OFF     ]
-"52
-[p x CSWEN  =  ON     ]
-"53
-[p x FCMEN  =  ON     ]
-"56
-[p x MCLRE  =  ON     ]
-"57
-[p x PWRTE  =  OFF     ]
-"58
-[p x WDTE  =  OFF     ]
-"59
-[p x LPBOREN  =  OFF     ]
-"60
-[p x BOREN  =  ON     ]
-"61
-[p x BORV  =  LOW     ]
-"62
-[p x PPS1WAY  =  ON     ]
-"63
-[p x STVREN  =  ON     ]
-"64
-[p x DEBUG  =  OFF     ]
-"67
-[p x WRT  =  OFF     ]
-"68
-[p x LVP  =  ON     ]
-"71
-[p x CP  =  OFF     ]
-"72
-[p x CPD  =  OFF     ]
+"575 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16F1xxxx_DFP/1.9.163/xc8\pic\include\proc\pic16f18346.h
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16F1xxxx_DFP/1.9.163/xc8\pic\include\proc\pic16f18346.h: 575:     struct {
+[s S41 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S41 . TMR1IF TMR2IF BCL1IF SSP1IF TXIF RCIF ADIF TMR1GIF ]
+"574
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16F1xxxx_DFP/1.9.163/xc8\pic\include\proc\pic16f18346.h: 574: typedef union {
+[u S40 `S41 1 ]
+[n S40 . . ]
+"586
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16F1xxxx_DFP/1.9.163/xc8\pic\include\proc\pic16f18346.h: 586: extern volatile PIR1bits_t PIR1bits __attribute__((address(0x011)));
+[v _PIR1bits `VS40 ~T0 @X0 0 e@17 ]
+[v F192 `(v ~T0 @X0 1 tf1`ul ]
+"12 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16F1xxxx_DFP/1.9.163/xc8\pic\include\builtins.h
+[v __delay `JF192 ~T0 @X0 0 e ]
+[p i __delay ]
+"115 ./mcc_generated_files/eusart.h
+[; ;./mcc_generated_files/eusart.h: 115: uint8_t EUSART_Read(void);
+[v _EUSART_Read `(uc ~T0 @X0 0 ef ]
+"23 C:\Program Files\Microchip\xc8\v2.35\pic\include\c99\ctype.h
+[; ;C:\Program Files\Microchip\xc8\v2.35\pic\include\c99\ctype.h: 23: int toupper(int);
+[v _toupper `(i ~T0 @X0 0 ef1`i ]
+"73 ./Led.h
+[; ;./Led.h: 73:     void LED_SetSetpoint(uint8_t value);
+[v _LED_SetSetpoint `(v ~T0 @X0 0 ef1`uc ]
+"78
+[; ;./Led.h: 78:     void LED_Setblue(uint8_t value);
+[v _LED_Setblue `(v ~T0 @X0 0 ef1`uc ]
+"79
+[; ;./Led.h: 79:     void LED_Setgreen(uint8_t value);
+[v _LED_Setgreen `(v ~T0 @X0 0 ef1`uc ]
+"80
+[; ;./Led.h: 80:     void LED_Setred(uint8_t value);
+[v _LED_Setred `(v ~T0 @X0 0 ef1`uc ]
 "55 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16F1xxxx_DFP/1.9.163/xc8\pic\include\proc\pic16f18346.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16F1xxxx_DFP/1.9.163/xc8\pic\include\proc\pic16f18346.h: 55: __asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
@@ -1127,72 +1091,155 @@ Version 4.0 HI-TECH Software Intermediate Code
 "19975
 [; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16F1xxxx_DFP/1.9.163/xc8\pic\include\proc\pic16f18346.h: 19975: __asm("TOSH equ 0FEFh");
 [; <" TOSH equ 0FEFh ;# ">
-"76 mcc_generated_files/mcc.c
-[; ;mcc_generated_files/mcc.c: 76: void SYSTEM_Initialize(void)
-[v _SYSTEM_Initialize `(v ~T0 @X0 1 ef ]
-"77
-[; ;mcc_generated_files/mcc.c: 77: {
+"15 UART.c
+[; ;UART.c: 15: static char setpoint;
+[v _setpoint `uc ~T0 @X0 1 s ]
+"16
+[; ;UART.c: 16: static char blue;
+[v _blue `uc ~T0 @X0 1 s ]
+"17
+[; ;UART.c: 17: static char green;
+[v _green `uc ~T0 @X0 1 s ]
+"18
+[; ;UART.c: 18: static char red;
+[v _red `uc ~T0 @X0 1 s ]
+"20
+[; ;UART.c: 20: static char command;
+[v _command `uc ~T0 @X0 1 s ]
+"21
+[; ;UART.c: 21: static int index;
+[v _index `i ~T0 @X0 1 s ]
+"22
+[; ;UART.c: 22: static char data[8];
+[v _data `uc ~T0 @X0 -> 8 `i s ]
+"23
+[; ;UART.c: 23: static char value[7];
+[v _value `uc ~T0 @X0 -> 7 `i s ]
+"24
+[; ;UART.c: 24: static int printCycle = 0;
+[v _printCycle `i ~T0 @X0 1 s ]
+[i _printCycle
+-> 0 `i
+]
+"26
+[; ;UART.c: 26: void UART(void) {
+[v _UART `(v ~T0 @X0 1 ef ]
 {
-[e :U _SYSTEM_Initialize ]
+[e :U _UART ]
 [f ]
-"79
-[; ;mcc_generated_files/mcc.c: 79:     PIN_MANAGER_Initialize();
-[e ( _PIN_MANAGER_Initialize ..  ]
-"80
-[; ;mcc_generated_files/mcc.c: 80:     OSCILLATOR_Initialize();
-[e ( _OSCILLATOR_Initialize ..  ]
-"81
-[; ;mcc_generated_files/mcc.c: 81:     WDT_Initialize();
-[e ( _WDT_Initialize ..  ]
-"82
-[; ;mcc_generated_files/mcc.c: 82:     SPI1_Initialize();
-[e ( _SPI1_Initialize ..  ]
-"83
-[; ;mcc_generated_files/mcc.c: 83:     EUSART_Initialize();
-[e ( _EUSART_Initialize ..  ]
-"84
-[; ;mcc_generated_files/mcc.c: 84: }
-[e :UE 967 ]
+"29
+[; ;UART.c: 29:     if ((PIR1bits.RCIF)) {
+[e $ ! != -> . . _PIR1bits 0 5 `i -> 0 `i 969  ]
+{
+"30
+[; ;UART.c: 30:         index = 0;
+[e = _index -> 0 `i ]
+"31
+[; ;UART.c: 31:         _delay((unsigned long)((5)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> -> 5 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"32
+[; ;UART.c: 32:         while ((PIR1bits.RCIF)) {
+[e $U 970  ]
+[e :U 971 ]
+{
+"33
+[; ;UART.c: 33:             data[index] = EUSART_Read();
+[e = *U + &U _data * -> -> _index `ui `ux -> -> # *U &U _data `ui `ux -> ( _EUSART_Read ..  `uc ]
+"34
+[; ;UART.c: 34:             index++;
+[e ++ _index -> 1 `i ]
+"35
+[; ;UART.c: 35:         }
 }
-"86
-[; ;mcc_generated_files/mcc.c: 86: void OSCILLATOR_Initialize(void)
-[v _OSCILLATOR_Initialize `(v ~T0 @X0 1 ef ]
-"87
-[; ;mcc_generated_files/mcc.c: 87: {
+[e :U 970 ]
+"32
+[; ;UART.c: 32:         while ((PIR1bits.RCIF)) {
+[e $ != -> . . _PIR1bits 0 5 `i -> 0 `i 971  ]
+[e :U 972 ]
+"36
+[; ;UART.c: 36:         data[index] = '\0';
+[e = *U + &U _data * -> -> _index `ui `ux -> -> # *U &U _data `ui `ux -> -> 0 `ui `uc ]
+"37
+[; ;UART.c: 37:         command = data[0];
+[e = _command *U + &U _data * -> -> -> 0 `i `ui `ux -> -> # *U &U _data `ui `ux ]
+"38
+[; ;UART.c: 38:         command = (char) toupper(command);
+[e = _command -> ( _toupper (1 -> _command `i `uc ]
+"39
+[; ;UART.c: 39:         for (int i = 0; i <8; i++){
 {
-[e :U _OSCILLATOR_Initialize ]
-[f ]
-"89
-[; ;mcc_generated_files/mcc.c: 89:     OSCCON1 = 0x00;
-[e = _OSCCON1 -> -> 0 `i `uc ]
-"91
-[; ;mcc_generated_files/mcc.c: 91:     OSCCON3 = 0x00;
-[e = _OSCCON3 -> -> 0 `i `uc ]
-"93
-[; ;mcc_generated_files/mcc.c: 93:     OSCEN = 0x00;
-[e = _OSCEN -> -> 0 `i `uc ]
-"95
-[; ;mcc_generated_files/mcc.c: 95:     OSCFRQ = 0x06;
-[e = _OSCFRQ -> -> 6 `i `uc ]
-"97
-[; ;mcc_generated_files/mcc.c: 97:     OSCTUNE = 0x00;
-[e = _OSCTUNE -> -> 0 `i `uc ]
-"100
-[; ;mcc_generated_files/mcc.c: 100: }
+[v _i `i ~T0 @X0 1 a ]
+[e = _i -> 0 `i ]
+[e $ < _i -> 8 `i 973  ]
+[e $U 974  ]
+[e :U 973 ]
+{
+"40
+[; ;UART.c: 40:             value[i] = data[i+1];
+[e = *U + &U _value * -> -> _i `ui `ux -> -> # *U &U _value `ui `ux *U + &U _data * -> -> + _i -> 1 `i `ui `ux -> -> # *U &U _data `ui `ux ]
+"41
+[; ;UART.c: 41:         }
+}
+[e ++ _i -> 1 `i ]
+[e $ < _i -> 8 `i 973  ]
+[e :U 974 ]
+}
+"43
+[; ;UART.c: 43:         switch (command) {
+[e $U 977  ]
+{
+"44
+[; ;UART.c: 44:             case 'L':
+[e :U 978 ]
+"46
+[; ;UART.c: 46:                 LED_SetSetpoint(setpoint);
+[e ( _LED_SetSetpoint (1 -> _setpoint `uc ]
+"47
+[; ;UART.c: 47:                 break;
+[e $U 976  ]
+"48
+[; ;UART.c: 48:             case 'b':
+[e :U 979 ]
+"50
+[; ;UART.c: 50:                 LED_Setblue(blue);
+[e ( _LED_Setblue (1 -> _blue `uc ]
+"51
+[; ;UART.c: 51:                 break;
+[e $U 976  ]
+"52
+[; ;UART.c: 52:             case 'g':
+[e :U 980 ]
+"54
+[; ;UART.c: 54:                 LED_Setgreen(green);
+[e ( _LED_Setgreen (1 -> _green `uc ]
+"55
+[; ;UART.c: 55:                 break;
+[e $U 976  ]
+"56
+[; ;UART.c: 56:             case 'r':
+[e :U 981 ]
+"58
+[; ;UART.c: 58:                 LED_Setred(red);
+[e ( _LED_Setred (1 -> _red `uc ]
+"59
+[; ;UART.c: 59:                 break;
+[e $U 976  ]
+"60
+[; ;UART.c: 60:         };
+}
+[e $U 976  ]
+[e :U 977 ]
+[e [\ -> _command `i , $ -> -> 76 `ui `i 978
+ , $ -> -> 98 `ui `i 979
+ , $ -> -> 103 `ui `i 980
+ , $ -> -> 114 `ui `i 981
+ 976 ]
+[e :U 976 ]
+"61
+[; ;UART.c: 61:     }
+}
+[e :U 969 ]
+"62
+[; ;UART.c: 62: }
 [e :UE 968 ]
-}
-"102
-[; ;mcc_generated_files/mcc.c: 102: void WDT_Initialize(void)
-[v _WDT_Initialize `(v ~T0 @X0 1 ef ]
-"103
-[; ;mcc_generated_files/mcc.c: 103: {
-{
-[e :U _WDT_Initialize ]
-[f ]
-"105
-[; ;mcc_generated_files/mcc.c: 105:     WDTCON = 0x20;
-[e = _WDTCON -> -> 32 `i `uc ]
-"106
-[; ;mcc_generated_files/mcc.c: 106: }
-[e :UE 969 ]
 }

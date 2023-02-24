@@ -1,4 +1,4 @@
-# 1 "mcc_generated_files/mcc.c"
+# 1 "mcc_generated_files/eusart.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,36 +6,10 @@
 # 1 "<built-in>" 2
 # 1 "C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16F1xxxx_DFP/1.9.163/xc8\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "mcc_generated_files/mcc.c" 2
-# 49 "mcc_generated_files/mcc.c"
-#pragma config FEXTOSC = OFF
-#pragma config RSTOSC = HFINT32
-#pragma config CLKOUTEN = OFF
-#pragma config CSWEN = ON
-#pragma config FCMEN = ON
-
-
-#pragma config MCLRE = ON
-#pragma config PWRTE = OFF
-#pragma config WDTE = OFF
-#pragma config LPBOREN = OFF
-#pragma config BOREN = ON
-#pragma config BORV = LOW
-#pragma config PPS1WAY = ON
-#pragma config STVREN = ON
-#pragma config DEBUG = OFF
-
-
-#pragma config WRT = OFF
-#pragma config LVP = ON
-
-
-#pragma config CP = OFF
-#pragma config CPD = OFF
-
-
-# 1 "mcc_generated_files/mcc.h" 1
-# 48 "mcc_generated_files/mcc.h"
+# 1 "mcc_generated_files/eusart.c" 2
+# 49 "mcc_generated_files/eusart.c"
+# 1 "mcc_generated_files/eusart.h" 1
+# 53 "mcc_generated_files/eusart.h"
 # 1 "C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16F1xxxx_DFP/1.9.163/xc8\\pic\\include\\xc.h" 1 3
 # 18 "C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16F1xxxx_DFP/1.9.163/xc8\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -11455,21 +11429,12 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 29 "C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16F1xxxx_DFP/1.9.163/xc8\\pic\\include\\xc.h" 2 3
-# 48 "mcc_generated_files/mcc.h" 2
-
-# 1 "mcc_generated_files/pin_manager.h" 1
-# 132 "mcc_generated_files/pin_manager.h"
-void PIN_MANAGER_Initialize (void);
-# 144 "mcc_generated_files/pin_manager.h"
-void PIN_MANAGER_IOC(void);
-# 49 "mcc_generated_files/mcc.h" 2
-
+# 53 "mcc_generated_files/eusart.h" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.35\\pic\\include\\c99\\stdbool.h" 1 3
-# 51 "mcc_generated_files/mcc.h" 2
+# 54 "mcc_generated_files/eusart.h" 2
 
-# 1 "mcc_generated_files/eusart.h" 1
-# 56 "mcc_generated_files/eusart.h"
+
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.35\\pic\\include\\c99\\stdio.h" 1 3
 # 24 "C:\\Program Files\\Microchip\\xc8\\v2.35\\pic\\include\\c99\\stdio.h" 3
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.35\\pic\\include\\c99\\bits/alltypes.h" 1 3
@@ -11621,67 +11586,69 @@ void EUSART_Initialize(void);
 uint8_t EUSART_Read(void);
 # 135 "mcc_generated_files/eusart.h"
 void EUSART_Write(uint8_t txData);
-# 52 "mcc_generated_files/mcc.h" 2
-
-# 1 "mcc_generated_files/spi1.h" 1
-# 54 "mcc_generated_files/spi1.h"
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.35\\pic\\include\\c99\\stddef.h" 1 3
-# 19 "C:\\Program Files\\Microchip\\xc8\\v2.35\\pic\\include\\c99\\stddef.h" 3
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.35\\pic\\include\\c99\\bits/alltypes.h" 1 3
-# 132 "C:\\Program Files\\Microchip\\xc8\\v2.35\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef int ptrdiff_t;
-# 19 "C:\\Program Files\\Microchip\\xc8\\v2.35\\pic\\include\\c99\\stddef.h" 2 3
-# 54 "mcc_generated_files/spi1.h" 2
-# 116 "mcc_generated_files/spi1.h"
-void SPI1_Initialize(void);
-# 151 "mcc_generated_files/spi1.h"
-uint8_t SPI1_Exchange8bit(uint8_t data);
-# 191 "mcc_generated_files/spi1.h"
-uint8_t SPI1_Exchange8bitBuffer(uint8_t *dataIn, uint8_t bufLen, uint8_t *dataOut);
-# 214 "mcc_generated_files/spi1.h"
-_Bool SPI1_IsBufferFull(void);
-# 239 "mcc_generated_files/spi1.h"
-_Bool SPI1_HasWriteCollisionOccured(void);
-# 263 "mcc_generated_files/spi1.h"
-void SPI1_ClearWriteCollisionStatus(void);
-# 53 "mcc_generated_files/mcc.h" 2
-# 69 "mcc_generated_files/mcc.h"
-void SYSTEM_Initialize(void);
-# 82 "mcc_generated_files/mcc.h"
-void OSCILLATOR_Initialize(void);
-# 95 "mcc_generated_files/mcc.h"
-void WDT_Initialize(void);
-# 74 "mcc_generated_files/mcc.c" 2
+# 49 "mcc_generated_files/eusart.c" 2
 
 
-void SYSTEM_Initialize(void)
+
+
+
+
+void EUSART_Initialize(void)
 {
 
-    PIN_MANAGER_Initialize();
-    OSCILLATOR_Initialize();
-    WDT_Initialize();
-    SPI1_Initialize();
-    EUSART_Initialize();
-}
 
-void OSCILLATOR_Initialize(void)
-{
 
-    OSCCON1 = 0x00;
+    BAUD1CON = 0x09;
 
-    OSCCON3 = 0x00;
 
-    OSCEN = 0x00;
+    RC1STA = 0x90;
 
-    OSCFRQ = 0x06;
 
-    OSCTUNE = 0x00;
+    TX1STA = 0x24;
 
+
+    SP1BRGL = 0x44;
+
+
+    SP1BRGH = 0x00;
 
 }
 
-void WDT_Initialize(void)
+
+uint8_t EUSART_Read(void)
 {
 
-    WDTCON = 0x20;
+    while(!PIR1bits.RCIF)
+    {
+    }
+
+
+    if(1 == RC1STAbits.OERR)
+    {
+
+
+        RC1STAbits.CREN = 0;
+        RC1STAbits.CREN = 1;
+    }
+
+    return RC1REG;
+}
+
+void EUSART_Write(uint8_t txData)
+{
+    while(0 == PIR1bits.TXIF)
+    {
+    }
+
+    TX1REG = txData;
+}
+
+char getch(void)
+{
+    return EUSART_Read();
+}
+
+void putch(char txData)
+{
+    EUSART_Write(txData);
 }
