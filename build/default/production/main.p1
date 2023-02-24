@@ -1444,14 +1444,14 @@ Version 4.0 HI-TECH Software Intermediate Code
  , $ -> . `E6790 5 `ui 1003
  986 ]
 [e :U 986 ]
-"161
-[; ;main.c: 161:         led_run = rand()%60;
+"162
+[; ;main.c: 162:             led_run = rand()%60;
 [e = _led_run -> % ( _rand ..  -> 60 `i `uc ]
-"164
-[; ;main.c: 164:         Send_LED_StartFrame();
+"166
+[; ;main.c: 166:         Send_LED_StartFrame();
 [e ( _Send_LED_StartFrame ..  ]
-"165
-[; ;main.c: 165:         for (char led = 0; led < NumberOfLEDs; led++) {
+"167
+[; ;main.c: 167:         for (char led = 0; led < NumberOfLEDs; led++) {
 {
 [v _led `uc ~T0 @X0 1 a ]
 [e = _led -> -> 0 `i `uc ]
@@ -1459,46 +1459,46 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $U 1007  ]
 [e :U 1006 ]
 {
-"166
-[; ;main.c: 166:             if (led == led_run) {
+"168
+[; ;main.c: 168:             if (led == led_run) {
 [e $ ! == -> _led `i -> _led_run `i 1009  ]
 {
-"167
-[; ;main.c: 167:                 Send_LED_Frame(0x05, blue, green, red);
+"169
+[; ;main.c: 169:                 Send_LED_Frame(0x05, blue, green, red);
 [e ( _Send_LED_Frame (4 , , , -> -> 5 `i `uc _blue _green _red ]
-"168
-[; ;main.c: 168:             } else {
+"170
+[; ;main.c: 170:             } else {
 }
 [e $U 1010  ]
 [e :U 1009 ]
 {
-"169
-[; ;main.c: 169:                 Send_LED_Frame(0x00, 0x00, 0x00, 0x00);
+"171
+[; ;main.c: 171:                 Send_LED_Frame(0x00, 0x00, 0x00, 0x00);
 [e ( _Send_LED_Frame (4 , , , -> -> 0 `i `uc -> -> 0 `i `uc -> -> 0 `i `uc -> -> 0 `i `uc ]
-"170
-[; ;main.c: 170:             }
+"172
+[; ;main.c: 172:             }
 }
 [e :U 1010 ]
-"171
-[; ;main.c: 171:         }
+"173
+[; ;main.c: 173:         }
 }
 [e ++ _led -> -> 1 `i `uc ]
 [e $ < -> _led `i _NumberOfLEDs 1006  ]
 [e :U 1007 ]
 }
-"173
-[; ;main.c: 173:         Send_LED_EndFrame();
-[e ( _Send_LED_EndFrame ..  ]
-"174
-[; ;main.c: 174:         _delay((unsigned long)((10000)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> -> 10000 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
 "175
-[; ;main.c: 175:     }
+[; ;main.c: 175:         Send_LED_EndFrame();
+[e ( _Send_LED_EndFrame ..  ]
+"176
+[; ;main.c: 176:         _delay((unsigned long)((1000)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"177
+[; ;main.c: 177:     }
 }
 [e :U 975 ]
 [e $U 976  ]
 [e :U 977 ]
-"176
-[; ;main.c: 176: }
+"178
+[; ;main.c: 178: }
 [e :UE 974 ]
 }

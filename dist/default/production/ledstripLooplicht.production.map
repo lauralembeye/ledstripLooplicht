@@ -5,10 +5,10 @@ Linker command line:
 -W-3 --edf=C:\Program Files\Microchip\xc8\v2.35\pic\dat\en_msgs.txt -cn \
   -h+dist/default/production\ledstripLooplicht.production.sym \
   --cmf=dist/default/production\ledstripLooplicht.production.cmf -z \
-  -Q16F18346 -oC:\Users\Vrijdag\AppData\Local\Temp\xcAse2k.4 \
+  -Q16F18346 -oC:\Users\Vrijdag\AppData\Local\Temp\xcAsf5s.4 \
   --defsym=__MPLAB_BUILD=1 \
   -Mdist/default/production/ledstripLooplicht.production.map \
-  --md=C:\Users\Vrijdag\AppData\Local\Temp\xcAse2k.dat -E1 \
+  --md=C:\Users\Vrijdag\AppData\Local\Temp\xcAsf5s.dat -E1 \
   -ver=XC8 Compiler --acfsm=1493 -ACODE=00h-07FFhx8 -ASTRCODE=00h-03FFFh \
   -ASTRING=00h-0FFhx64 -ACONST=00h-0FFhx64 -AENTRY=00h-0FFhx64 \
   -ACOMMON=070h-07Fh -ABANK0=020h-06Fh -ABANK1=0A0h-0EFh \
@@ -38,7 +38,7 @@ Linker command line:
   -peeprom_data=EEDATA -DEEDATA=2 -DCODE=2 -DSTRCODE=2 -DSTRING=2 -DCONST=2 \
   -DENTRY=2 -preset_vec=00h,intentry,init,end_init -ppowerup=CODE \
   -pcinit=CODE -pfunctab=ENTRY -k \
-  C:\Users\Vrijdag\AppData\Local\Temp\xcAse2k.o \
+  C:\Users\Vrijdag\AppData\Local\Temp\xcAsf5s.o \
   dist/default/production\ledstripLooplicht.production.o 
 
 Object code version is 3.11
@@ -48,7 +48,7 @@ Machine type is 16F18346
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\Vrijdag\AppData\Local\Temp\xcAse2k.o
+C:\Users\Vrijdag\AppData\Local\Temp\xcAsf5s.o
                 end_init                              2        2        2        0       0
                 reset_vec                             0        0        2        0       0
                 config                             8007     8007        4        0       4
