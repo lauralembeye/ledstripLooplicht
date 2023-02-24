@@ -49,7 +49,7 @@
 /*
                          Main application
  */
-uint8_t blue = 0x00, green = 0x00, red = 0xFF;
+uint8_t blue = 0xFF, green = 0xFF, red = 0xFF;
 
 enum states {
     GREEN_UP, RED_DOWN, BLUE_UP, GREEN_DOWN, RED_UP, BLUE_DOWN
@@ -166,7 +166,7 @@ void main(void) {
         Send_LED_StartFrame();
         for (char led = 0; led < NumberOfLEDs; led++) {
             if (led == led_run) {
-                Send_LED_Frame(0x05, blue, green, red);
+                Send_LED_Frame(0xFF, 0x00, green, 0x00);
             } else {
                 Send_LED_Frame(0x00, 0x00, 0x00, 0x00);
             } 

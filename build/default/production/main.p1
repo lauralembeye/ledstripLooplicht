@@ -1081,14 +1081,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16F1xxxx_DFP/1.9.163/xc8\pic\include\proc\pic16f18346.h: 19975: __asm("TOSH equ 0FEFh");
 [; <" TOSH equ 0FEFh ;# ">
 "52 main.c
-[; ;main.c: 52: uint8_t blue = 0x00, green = 0x00, red = 0xFF;
+[; ;main.c: 52: uint8_t blue = 0xFF, green = 0xFF, red = 0xFF;
 [v _blue `uc ~T0 @X0 1 e ]
 [i _blue
--> -> 0 `i `uc
+-> -> 255 `i `uc
 ]
 [v _green `uc ~T0 @X0 1 e ]
 [i _green
--> -> 0 `i `uc
+-> -> 255 `i `uc
 ]
 [v _red `uc ~T0 @X0 1 e ]
 [i _red
@@ -1464,8 +1464,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $ ! == -> _led `i -> _led_run `i 1009  ]
 {
 "169
-[; ;main.c: 169:                 Send_LED_Frame(0x05, blue, green, red);
-[e ( _Send_LED_Frame (4 , , , -> -> 5 `i `uc _blue _green _red ]
+[; ;main.c: 169:                 Send_LED_Frame(0xFF, 0x00, green, 0x00);
+[e ( _Send_LED_Frame (4 , , , -> -> 255 `i `uc -> -> 0 `i `uc _green -> -> 0 `i `uc ]
 "170
 [; ;main.c: 170:             } else {
 }

@@ -9,11 +9,11 @@
 ### Memory Usage ###
  Intel Hex-file ranges:
   0h - 7h		(dist/default/production\ledstripLooplicht.production.hex)
-  B2Ah - 1003h		(dist/default/production\ledstripLooplicht.production.hex)
+  B26h - 1003h		(dist/default/production\ledstripLooplicht.production.hex)
   10000h - 10007h		(dist/default/production\ledstripLooplicht.production.hex)
   1000Eh - 10015h		(dist/default/production\ledstripLooplicht.production.hex)
  Unused ranges:
-  8h - B29h
+  8h - B25h
   1004h - FFFFh
   10008h - 1000Dh
 
@@ -26,7 +26,7 @@
 ----------------------------------------------------------
 00000000 | H1 H1 H1 H1 H1 H1 H1 H1 -- -- -- -- -- -- -- --
 ----------------------------------------------------------
-00000B20 | -- -- -- -- -- -- -- -- -- -- H1 H1 H1 H1 H1 H1
+00000B20 | -- -- -- -- -- -- H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00000B30 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00000B40 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00000B50 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
