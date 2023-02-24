@@ -11477,7 +11477,7 @@ void WDT_Initialize(void);
 
 
 
-uint8_t blue = 0xFF, green = 0xFF, red = 0xFF;
+uint8_t blue = 0x1F, green = 0x1F, red = 0x1F;
 
 enum states {
     GREEN_UP, RED_DOWN, BLUE_UP, GREEN_DOWN, RED_UP, BLUE_DOWN
@@ -11530,55 +11530,14 @@ void main(void) {
                 }
                 break;
         }
-
-        switch (change_color) {
-            case GREEN_UP: if (green < 0xFF) {
-                    green += step;
-                } else {
-                    change_color = RED_DOWN;
-                }
-                break;
-            case RED_DOWN: if (red > 0x00) {
-                    red -= step;
-                } else {
-                    change_color = BLUE_UP;
-                }
-                break;
-            case BLUE_UP: if (blue < 0xFF) {
-                    blue += step;
-                } else {
-                    change_color = GREEN_DOWN;
-                }
-                break;
-            case GREEN_DOWN: if (green > 0x00) {
-                    green -= step;
-                } else {
-                    change_color = RED_UP;
-                }
-                break;
-            case RED_UP: if (red < 0xFF) {
-                    red += step;
-                } else {
-                    change_color = BLUE_DOWN;
-                }
-                break;
-            case BLUE_DOWN: if (blue > 0x00) {
-                    blue -= step;
-                } else {
-                    change_color = GREEN_UP;
-                }
-                break;
-        }
-
-
-            led_run = rand()%60;
-
+# 162 "main.c"
+            led_run = rand()%NumberOfLEDs;
 
 
         Send_LED_StartFrame();
         for (char led = 0; led < NumberOfLEDs; led++) {
             if (led == led_run) {
-                Send_LED_Frame(0xFF, 0x00, green, 0x00);
+                Send_LED_Frame(0x1F, rand(), rand() , rand());
             } else {
                 Send_LED_Frame(0x00, 0x00, 0x00, 0x00);
             }

@@ -49,7 +49,7 @@
 /*
                          Main application
  */
-uint8_t blue = 0xFF, green = 0xFF, red = 0xFF;
+uint8_t blue = 0x1F, green = 0x1F, red = 0x1F;
 
 enum states {
     GREEN_UP, RED_DOWN, BLUE_UP, GREEN_DOWN, RED_UP, BLUE_DOWN
@@ -119,7 +119,7 @@ void main(void) {
                 break;
         }
 
-        switch (change_color) {
+        /*switch (change_color) {
             case GREEN_UP: if (green < 0xFF) {
                     green += step;
                 } else {
@@ -156,17 +156,16 @@ void main(void) {
                     change_color = GREEN_UP;
                 }
                 break;
-        }
+        }*/
 
         //do {
-            led_run = rand()%60;
+            led_run = rand()%NumberOfLEDs;
         //} while (led_run > 60 && led_run < 0);
-        
         //start frame
         Send_LED_StartFrame();
         for (char led = 0; led < NumberOfLEDs; led++) {
             if (led == led_run) {
-                Send_LED_Frame(0xFF, 0x00, green, 0x00);
+                Send_LED_Frame(0x1F, rand(), rand() , rand());
             } else {
                 Send_LED_Frame(0x00, 0x00, 0x00, 0x00);
             } 

@@ -182,22 +182,16 @@ DOWN 1
 [v _GIE GIE `VEb  1 e 0 @95 ]
 "4 C:\Program Files\Microchip\xc8\v2.35\pic\sources\c99\common\rand.c
 [v _seed seed `ul  1 s 4 seed ]
-"52 C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
-[v _blue blue `uc  1 e 1 0 ]
-[v _green green `uc  1 e 1 0 ]
-[v _red red `uc  1 e 1 0 ]
-"57
-[v _change_color change_color `E6790  1 e 1 0 ]
-"63
+"63 C:\Users\Vrijdag\Documents\GitHub\ledstripLooplicht\main.c
 [v _direction direction `E6799  1 e 1 0 ]
 "64
 [v _led_run led_run `uc  1 e 1 0 ]
 "86
 [v _main main `(v  1 e 1 0 ]
 {
-"167
-[v main@led led `uc  1 a 1 13 ]
-"178
+"166
+[v main@led led `uc  1 a 1 14 ]
+"177
 } 0
 "11 C:\Program Files\Microchip\xc8\v2.35\pic\sources\c99\common\rand.c
 [v _rand rand `(i  1 e 2 0 ]
@@ -237,10 +231,10 @@ DOWN 1
 {
 [v Send_LED_Frame@intensity intensity `uc  1 a 1 wreg ]
 [v Send_LED_Frame@intensity intensity `uc  1 a 1 wreg ]
-[v Send_LED_Frame@blue blue `uc  1 p 1 1 ]
-[v Send_LED_Frame@green green `uc  1 p 1 2 ]
-[v Send_LED_Frame@red red `uc  1 p 1 3 ]
-[v Send_LED_Frame@intensity intensity `uc  1 a 1 4 ]
+[v Send_LED_Frame@blue blue `uc  1 p 1 4 ]
+[v Send_LED_Frame@green green `uc  1 p 1 5 ]
+[v Send_LED_Frame@red red `uc  1 p 1 6 ]
+[v Send_LED_Frame@intensity intensity `uc  1 a 1 7 ]
 "72
 } 0
 "80

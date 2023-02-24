@@ -1081,18 +1081,18 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16F1xxxx_DFP/1.9.163/xc8\pic\include\proc\pic16f18346.h: 19975: __asm("TOSH equ 0FEFh");
 [; <" TOSH equ 0FEFh ;# ">
 "52 main.c
-[; ;main.c: 52: uint8_t blue = 0xFF, green = 0xFF, red = 0xFF;
+[; ;main.c: 52: uint8_t blue = 0x1F, green = 0x1F, red = 0x1F;
 [v _blue `uc ~T0 @X0 1 e ]
 [i _blue
--> -> 255 `i `uc
+-> -> 31 `i `uc
 ]
 [v _green `uc ~T0 @X0 1 e ]
 [i _green
--> -> 255 `i `uc
+-> -> 31 `i `uc
 ]
 [v _red `uc ~T0 @X0 1 e ]
 [i _red
--> -> 255 `i `uc
+-> -> 31 `i `uc
 ]
 "57
 [; ;main.c: 57: enum states change_color = GREEN_UP;
@@ -1283,222 +1283,61 @@ Version 4.0 HI-TECH Software Intermediate Code
  , $ -> . `E6799 1 `ui 983
  978 ]
 [e :U 978 ]
-"122
-[; ;main.c: 122:         switch (change_color) {
+"162
+[; ;main.c: 162:             led_run = rand()%NumberOfLEDs;
+[e = _led_run -> % ( _rand ..  _NumberOfLEDs `uc ]
+"165
+[; ;main.c: 165:         Send_LED_StartFrame();
+[e ( _Send_LED_StartFrame ..  ]
+"166
+[; ;main.c: 166:         for (char led = 0; led < NumberOfLEDs; led++) {
+{
+[v _led `uc ~T0 @X0 1 a ]
+[e = _led -> -> 0 `i `uc ]
+[e $ < -> _led `i _NumberOfLEDs 986  ]
 [e $U 987  ]
+[e :U 986 ]
 {
-"123
-[; ;main.c: 123:             case GREEN_UP: if (green < 0xFF) {
-[e :U 988 ]
-[e $ ! < -> _green `i -> 255 `i 989  ]
+"167
+[; ;main.c: 167:             if (led == led_run) {
+[e $ ! == -> _led `i -> _led_run `i 989  ]
 {
-"124
-[; ;main.c: 124:                     green += step;
-[e =+ _green -> _step `uc ]
-"125
-[; ;main.c: 125:                 } else {
+"168
+[; ;main.c: 168:                 Send_LED_Frame(0x1F, rand(), rand() , rand());
+[e ( _Send_LED_Frame (4 , , , -> -> 31 `i `uc -> ( _rand ..  `uc -> ( _rand ..  `uc -> ( _rand ..  `uc ]
+"169
+[; ;main.c: 169:             } else {
 }
 [e $U 990  ]
 [e :U 989 ]
 {
-"126
-[; ;main.c: 126:                     change_color = RED_DOWN;
-[e = _change_color . `E6790 1 ]
-"127
-[; ;main.c: 127:                 }
+"170
+[; ;main.c: 170:                 Send_LED_Frame(0x00, 0x00, 0x00, 0x00);
+[e ( _Send_LED_Frame (4 , , , -> -> 0 `i `uc -> -> 0 `i `uc -> -> 0 `i `uc -> -> 0 `i `uc ]
+"171
+[; ;main.c: 171:             }
 }
 [e :U 990 ]
-"128
-[; ;main.c: 128:                 break;
-[e $U 986  ]
-"129
-[; ;main.c: 129:             case RED_DOWN: if (red > 0x00) {
-[e :U 991 ]
-[e $ ! > -> _red `i -> 0 `i 992  ]
-{
-"130
-[; ;main.c: 130:                     red -= step;
-[e =- _red -> _step `uc ]
-"131
-[; ;main.c: 131:                 } else {
-}
-[e $U 993  ]
-[e :U 992 ]
-{
-"132
-[; ;main.c: 132:                     change_color = BLUE_UP;
-[e = _change_color . `E6790 2 ]
-"133
-[; ;main.c: 133:                 }
-}
-[e :U 993 ]
-"134
-[; ;main.c: 134:                 break;
-[e $U 986  ]
-"135
-[; ;main.c: 135:             case BLUE_UP: if (blue < 0xFF) {
-[e :U 994 ]
-[e $ ! < -> _blue `i -> 255 `i 995  ]
-{
-"136
-[; ;main.c: 136:                     blue += step;
-[e =+ _blue -> _step `uc ]
-"137
-[; ;main.c: 137:                 } else {
-}
-[e $U 996  ]
-[e :U 995 ]
-{
-"138
-[; ;main.c: 138:                     change_color = GREEN_DOWN;
-[e = _change_color . `E6790 3 ]
-"139
-[; ;main.c: 139:                 }
-}
-[e :U 996 ]
-"140
-[; ;main.c: 140:                 break;
-[e $U 986  ]
-"141
-[; ;main.c: 141:             case GREEN_DOWN: if (green > 0x00) {
-[e :U 997 ]
-[e $ ! > -> _green `i -> 0 `i 998  ]
-{
-"142
-[; ;main.c: 142:                     green -= step;
-[e =- _green -> _step `uc ]
-"143
-[; ;main.c: 143:                 } else {
-}
-[e $U 999  ]
-[e :U 998 ]
-{
-"144
-[; ;main.c: 144:                     change_color = RED_UP;
-[e = _change_color . `E6790 4 ]
-"145
-[; ;main.c: 145:                 }
-}
-[e :U 999 ]
-"146
-[; ;main.c: 146:                 break;
-[e $U 986  ]
-"147
-[; ;main.c: 147:             case RED_UP: if (red < 0xFF) {
-[e :U 1000 ]
-[e $ ! < -> _red `i -> 255 `i 1001  ]
-{
-"148
-[; ;main.c: 148:                     red += step;
-[e =+ _red -> _step `uc ]
-"149
-[; ;main.c: 149:                 } else {
-}
-[e $U 1002  ]
-[e :U 1001 ]
-{
-"150
-[; ;main.c: 150:                     change_color = BLUE_DOWN;
-[e = _change_color . `E6790 5 ]
-"151
-[; ;main.c: 151:                 }
-}
-[e :U 1002 ]
-"152
-[; ;main.c: 152:                 break;
-[e $U 986  ]
-"153
-[; ;main.c: 153:             case BLUE_DOWN: if (blue > 0x00) {
-[e :U 1003 ]
-[e $ ! > -> _blue `i -> 0 `i 1004  ]
-{
-"154
-[; ;main.c: 154:                     blue -= step;
-[e =- _blue -> _step `uc ]
-"155
-[; ;main.c: 155:                 } else {
-}
-[e $U 1005  ]
-[e :U 1004 ]
-{
-"156
-[; ;main.c: 156:                     change_color = GREEN_UP;
-[e = _change_color . `E6790 0 ]
-"157
-[; ;main.c: 157:                 }
-}
-[e :U 1005 ]
-"158
-[; ;main.c: 158:                 break;
-[e $U 986  ]
-"159
-[; ;main.c: 159:         }
-}
-[e $U 986  ]
-[e :U 987 ]
-[e [\ -> _change_color `ui , $ -> . `E6790 0 `ui 988
- , $ -> . `E6790 1 `ui 991
- , $ -> . `E6790 2 `ui 994
- , $ -> . `E6790 3 `ui 997
- , $ -> . `E6790 4 `ui 1000
- , $ -> . `E6790 5 `ui 1003
- 986 ]
-[e :U 986 ]
-"162
-[; ;main.c: 162:             led_run = rand()%60;
-[e = _led_run -> % ( _rand ..  -> 60 `i `uc ]
-"166
-[; ;main.c: 166:         Send_LED_StartFrame();
-[e ( _Send_LED_StartFrame ..  ]
-"167
-[; ;main.c: 167:         for (char led = 0; led < NumberOfLEDs; led++) {
-{
-[v _led `uc ~T0 @X0 1 a ]
-[e = _led -> -> 0 `i `uc ]
-[e $ < -> _led `i _NumberOfLEDs 1006  ]
-[e $U 1007  ]
-[e :U 1006 ]
-{
-"168
-[; ;main.c: 168:             if (led == led_run) {
-[e $ ! == -> _led `i -> _led_run `i 1009  ]
-{
-"169
-[; ;main.c: 169:                 Send_LED_Frame(0xFF, 0x00, green, 0x00);
-[e ( _Send_LED_Frame (4 , , , -> -> 255 `i `uc -> -> 0 `i `uc _green -> -> 0 `i `uc ]
-"170
-[; ;main.c: 170:             } else {
-}
-[e $U 1010  ]
-[e :U 1009 ]
-{
-"171
-[; ;main.c: 171:                 Send_LED_Frame(0x00, 0x00, 0x00, 0x00);
-[e ( _Send_LED_Frame (4 , , , -> -> 0 `i `uc -> -> 0 `i `uc -> -> 0 `i `uc -> -> 0 `i `uc ]
 "172
-[; ;main.c: 172:             }
-}
-[e :U 1010 ]
-"173
-[; ;main.c: 173:         }
+[; ;main.c: 172:         }
 }
 [e ++ _led -> -> 1 `i `uc ]
-[e $ < -> _led `i _NumberOfLEDs 1006  ]
-[e :U 1007 ]
+[e $ < -> _led `i _NumberOfLEDs 986  ]
+[e :U 987 ]
 }
-"175
-[; ;main.c: 175:         Send_LED_EndFrame();
+"174
+[; ;main.c: 174:         Send_LED_EndFrame();
 [e ( _Send_LED_EndFrame ..  ]
-"176
-[; ;main.c: 176:         _delay((unsigned long)((1000)*(32000000/4000.0)));
+"175
+[; ;main.c: 175:         _delay((unsigned long)((1000)*(32000000/4000.0)));
 [e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"177
-[; ;main.c: 177:     }
+"176
+[; ;main.c: 176:     }
 }
 [e :U 975 ]
 [e $U 976  ]
 [e :U 977 ]
-"178
-[; ;main.c: 178: }
+"177
+[; ;main.c: 177: }
 [e :UE 974 ]
 }
